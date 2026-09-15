@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+const images = `${base}images/vacuum-accessory-dock/`;
+---
+<BaseLayout title="Vacuum Accessory Dock">
+  <header class="page-intro project-intro">
+    <a href={`${base}work/`}>Back to work</a>
+    <p class="eyebrow">Design study / Reverse engineering / 3D printing</p>
+    <h1>Vacuum Accessory Dock</h1>
+    <p class="intro muted">A custom dock built around an existing accessory connection, using 3D scanning and CAD to move from physical geometry to a functional printed part.</p>
+  </header>
+
+  <section class="project-opening" aria-labelledby="goal-heading">
+    <figure>
+      <img class="installed-photo" src={`${images}installed.jpeg`} alt="Completed blue dock fastened to a wooden surface, holding two vacuum accessories beside the vacuum." fetchpriority="high" />
+      <figcaption>The completed dock, installed with both accessories in place.</figcaption>
+    </figure>
+    <div class="project-goal">
+      <h2 id="goal-heading">A practical place to start</h2>
+      <p>I wanted a wall-mountable docking system for my vacuum accessories, and a practical project to improve my 3D scanning workflow.</p>
+      <p>The connection between the accessory and the dock was the focus: capture the existing shape, reconstruct it as editable geometry, and use it to form the receiving socket.</p>
+      <dl class="project-facts">
+        <div><dt>Process</dt><dd>3D scanning, mesh cleanup, reverse engineering, CAD, 3D printing</dd></div>
+        <div><dt>Software</dt><dd>RevoScan, Solid Edge Community Edition, Fusion</dd></div>
+        <div><dt>Outcome</dt><dd>A mounted, two-accessory dock</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section process-step" aria-labelledby="scan-heading">
+    <div class="process-copy">
+      <p class="eyebrow">01 / Capture</p>
+      <h2 id="scan-heading">Scan the mating interface</h2>
+      <p>I took multiple scans focused on the accessory’s mating interface. I merged the point clouds, smoothed and simplified the data, and isolated the relevant geometry before creating the final mesh.</p>
+    </div>
+    <figure><img src={`${images}merged-mesh.png`} width="892" height="882" alt="Merged blue scan mesh of the vacuum brush accessory, showing the connection at its base." loading="lazy" /><figcaption>The merged mesh provided a reference for the accessory’s existing shape.</figcaption></figure>
+  </section>
+
+  <section class="section process-step" aria-labelledby="datum-heading">
+    <div class="process-copy">
+      <p class="eyebrow">02 / Establish a reference</p>
+      <h2 id="datum-heading">Create a datum plane</h2>
+      <p>In Solid Edge Community Edition, I used the feature-selection brush to identify a region of the mesh and fit a datum plane as closely as possible. This gave me a geometric reference for the next stage.</p>
+    </div>
+    <figure><img src={`${images}datum-plane.png`} width="717" height="1052" alt="Accessory mesh in Solid Edge with a fitted purple datum plane across the end of the connector." loading="lazy" /><figcaption>A fitted plane on the scanned accessory in Solid Edge.</figcaption></figure>
+  </section>
+
+  <section class="section process-step" aria-labelledby="rebuild-heading">
+    <div class="process-copy">
+      <p class="eyebrow">03 / Reconstruct</p>
+      <h2 id="rebuild-heading">Turn the mesh into editable CAD</h2>
+      <p>I brought the model into Fusion and created multiple mesh sections to reconstruct the mating hardware. These sections helped me work from a mesh reference toward an editable positive model of the connection.</p>
+      <p>I then used Combine to subtract that positive shape from a solid block, creating the negative geometry of the receiving socket.</p>
+    </div>
+    <figure><img src={`${images}cad-fitment.png`} width="567" height="1057" alt="Scanned accessory positioned inside the modeled receiving socket for a CAD fitment check." loading="lazy" /><figcaption>CAD fitment view: the accessory mesh positioned within the socket.</figcaption></figure>
+  </section>
+
+  <section class="section process-step" aria-labelledby="dock-heading">
+    <div class="process-copy">
+      <p class="eyebrow">04 / Build the dock</p>
+      <h2 id="dock-heading">Connect the sockets to a mounting plate</h2>
+      <p>Using a loft and basic CAD features, I connected the socket to a wall-mounting structure. I copied and moved the socket geometry, then joined the bodies to create a dock for two accessories.</p>
+      <p>The finished printed part holds both accessories together beside the vacuum. The project took the interface through the full workflow: scan, reference geometry, editable CAD, and a physical dock.</p>
+    </div>
+    <figure><img src={`${images}final-cad.png`} width="702" height="922" alt="Final CAD model with two receiving sockets joined to a mounting plate, with the scanned accessory in the upper socket." loading="lazy" /><figcaption>The final two-socket dock model, with the accessory mesh retained as a reference.</figcaption></figure>
+  </section>
+  <div class="project-end"><a href={`${base}work/`}>Back to all work</a></div>
+</BaseLayout>

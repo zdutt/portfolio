@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import VacuumDockPreview from '../components/VacuumDockPreview.astro';
+---
+<BaseLayout title="Work">
+  <header class="page-intro"><p class="eyebrow">Portfolio</p><h1>Work</h1><p class="intro muted">Projects and design studies.</p></header>
+  <section class="section" aria-labelledby="selected-heading">
+    <h2 id="selected-heading">Selected Work</h2>
+    <VacuumDockPreview />
+  </section>
+  <section class="section" aria-labelledby="studies-heading">
+    <h2 id="studies-heading">Smaller Work / Design Notes</h2>
+    <p class="muted">A space for focused studies and smaller explorations.</p>
+    <div class="placeholder notes-placeholder"><span>Design study / Placeholder</span></div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.astro/
+.verification/
+.sites-runtime/
+AGENTS.md
+sources/
+.env
+.env.*
+!.env.example

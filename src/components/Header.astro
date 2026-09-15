@@ -1,0 +1,19 @@
+---
+const base = import.meta.env.BASE_URL;
+const links = [
+  { label: 'Work', path: 'work/' },
+  { label: 'Experience', path: 'experience/' },
+  { label: 'About', path: 'about/' },
+];
+---
+<header class="site-header shell">
+  <a class="wordmark" href={base}>Zachary Dutton</a>
+  <nav aria-label="Main navigation">
+    <ul>
+      {links.map(({ label, path }) => (
+        <li><a href={`${base}${path}`} aria-current={Astro.url.pathname.replace(/\/$/, '') === `${base}${path}`.replace(/\/$/, '') ? 'page' : undefined}>{label}</a></li>
+      ))}
+      <li><span class="nav-placeholder" role="link" aria-disabled="true" aria-label="Resume — coming soon" title="Resume — coming soon">Resume <span class="sr-only">(coming soon)</span></span></li>
+    </ul>
+  </nav>
+</header>

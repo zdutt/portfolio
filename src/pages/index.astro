@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import VacuumDockPreview from '../components/VacuumDockPreview.astro';
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="Home">
+  <section class="hero" aria-labelledby="intro-heading">
+    <p class="eyebrow">Portfolio / In progress</p>
+    <h1 id="intro-heading">Zachary Dutton</h1>
+    <p class="intro muted">Introduction to come.</p>
+    <div class="placeholder hero-placeholder"><span>Introductory image / Placeholder</span></div>
+  </section>
+
+  <section class="section" aria-labelledby="work-heading">
+    <div class="section-heading">
+      <h2 id="work-heading">Selected Work</h2>
+      <a href={`${base}work/`}>View work</a>
+    </div>
+    <VacuumDockPreview />
+  </section>
+
+  <section class="section" aria-labelledby="notes-heading">
+    <div class="section-heading"><h2 id="notes-heading">Smaller Work / Design Notes</h2></div>
+    <p class="muted">A space for smaller studies, experiments, and observations.</p>
+    <div class="placeholder notes-placeholder"><span>Design study / Placeholder</span></div>
+  </section>
+
+  <section class="section preview" aria-labelledby="experience-heading">
+    <h2 id="experience-heading">Experience</h2>
+    <div><p class="muted">Professional experience to come.</p><a href={`${base}experience/`}>View experience</a></div>
+  </section>
+
+  <section class="section preview" aria-labelledby="about-heading">
+    <h2 id="about-heading">About</h2>
+    <div><p class="muted">A short introduction and background to come.</p><a href={`${base}about/`}>About Zachary</a></div>
+  </section>
+</BaseLayout>
