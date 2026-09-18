@@ -26,15 +26,15 @@ Future project stories should reveal the problem, process, iteration, and result
 
 ## Stack and simplicity
 
-Astro, plain CSS, and vanilla JavaScript only when a concrete interaction needs it. Current output is static HTML/CSS with no authored client JavaScript. Astro is the sole direct dependency.
+Astro, plain CSS, and vanilla JavaScript only when a concrete interaction needs it. The homepage experience timeline contains the site's only authored client-side script. Astro is the sole direct dependency.
 
-Intended eventual hosting: GitHub Pages, with a custom domain later. Do not substitute another hosting service or publish during a local-only iteration. Configure the real site URL and repository base path when hosting is actually set up.
+Production hosting: the `zdutt/portfolio` GitHub repository deploys through Vercel to `https://zdutton.com`. Vercel watches `main`. Do not add GitHub Pages configuration. Build and review locally before any explicitly authorized commit and push.
 
 No React, Vue, Svelte, Tailwind, Bootstrap, UI/component libraries, animation libraries, Three.js, CMS, database, authentication, or speculative dependencies. Do not pre-build schemas, filters, categories, galleries, interactive CAD viewers, card systems, or content-management machinery.
 
 ## Current sitemap
 
-- `/` — introduction, Selected Work, Smaller Work / Design Notes, Experience preview, About preview, shared footer/contact area.
+- `/` — headshot and concise factual profile, horizontally scrollable experience chronology, Selected Work, Smaller Work / Design Notes, About preview, shared footer/contact area.
 - `/work/` — spaces for selected work and smaller studies.
 - `/experience/` — professional background placeholder, eventually complementing the resume.
 - `/about/` — personal introduction/background and a photograph placeholder.
@@ -58,3 +58,9 @@ The user explicitly supplied a local project folder containing background text a
 Confirmed workflow: multiple scans of the accessory mating interface; merged and cleaned point clouds; meshing; datum-plane fitting in Solid Edge Community Edition; mesh sections and editable reconstruction in Fusion; subtraction of the positive connector to form the socket; lofted mounting geometry; duplication and joining for two accessories. The supplied completed photograph shows the printed dock installed with both accessories. The fitment screenshot is a CAD view, not evidence of physical tolerance testing. No material, print settings, measured tolerances, load rating, or iteration count were provided; do not invent these.
 
 The dedicated preview component only shares this project's presentation between two pages. It is not a final card system or a generalized project schema. All other placeholder areas remain available for incremental design.
+
+## Homepage experience timeline
+
+The user supplied the factual chronology and copy for six roles from June 2022 through August 2025. Display the entries newest-to-oldest so the most recent technical experience appears first, and preserve the supplied meaning. Use uniform entry widths and marker styling. The three SIG SAUER internships retain `/ 01`, `/ 02`, and `/ 03` in their company labels to communicate sequence without giving those entries a different visual treatment.
+
+The timeline uses native horizontal overflow plus a small authored script for mouse dragging and extremely slow idle movement on desktop. It reverses at the ends, pauses for interaction, disables automatic movement on small screens, and respects `prefers-reduced-motion`. Keep manual scrolling primary and do not add a carousel or animation dependency.

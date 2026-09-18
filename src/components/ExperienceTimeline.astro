@@ -1,0 +1,192 @@
+---
+const experiences = [
+  {
+    dates: 'Jun 2022 – Aug 2022',
+    company: 'Dover Honda',
+    role: 'Express Lube Mechanic',
+    location: 'Dover, New Hampshire',
+    summary: 'Performed rapid maintenance services and multi-point vehicle inspections while keeping tooling and work bays organized for predictable turnaround times.',
+  },
+  {
+    dates: 'May 2023 – Aug 2023',
+    company: 'Pirouette Medical Inc.',
+    role: 'Engineering Intern',
+    location: 'Portsmouth, New Hampshire',
+    summary: 'Supported medical-device development, testing, and light manufacturing. Built and tested development hardware, created CAD for fixtures and jigs, collected dimensional and reliability data, and helped establish cleanroom, test, assembly, and manufacturing workcells.',
+  },
+  {
+    dates: 'May 2024 – Aug 2024',
+    company: 'SIG SAUER / 01',
+    role: 'Additive Manufacturing Intern',
+    location: 'Exeter, New Hampshire',
+    summary: 'Supported EOS M290/M400 metal additive production from build preparation through post-processing. Worked with machine setup, powder handling, build recovery, wire EDM, cleaning, inspection handoff, and production traceability.',
+  },
+  {
+    dates: 'Dec 2024 – Jan 2025',
+    company: 'SIG SAUER / 02',
+    role: 'Additive Manufacturing Intern',
+    location: 'Exeter, New Hampshire',
+    summary: 'Returned as new powder-handling and automation equipment was added to the additive cell. Helped integrate Grenzebach and Volkmann equipment, develop operating procedures, expand process documentation, and support troubleshooting of the new workflows.',
+  },
+  {
+    dates: 'Jan 2025 – May 2025',
+    company: 'Pratt & Whitney',
+    role: 'Aftermarket Sustainment Engineer Co-Op',
+    location: 'North Berwick, Maine',
+    summary: 'Supported repair engineering for commercial gas-turbine hardware. Developed and revised CAD, drawings, repair limits, instructions, and shop-floor documentation while working with repair technicians, MRB, and manufacturing stakeholders.',
+  },
+  {
+    dates: 'May 2025 – Aug 2025',
+    company: 'SIG SAUER / 03',
+    role: 'Additive Manufacturing Intern',
+    location: 'Exeter, New Hampshire',
+    summary: 'Returned for a third internship as the metal additive operation expanded. Helped integrate three additional EOS M400 systems, supported M290/M400 production, designed build plates and fixtures, developed process controls and documentation, and supported powder-reclaim and downstream manufacturing improvements.',
+  },
+];
+
+const displayedExperiences = [...experiences].reverse();
+---
+
+<section class="experience-timeline section" aria-labelledby="timeline-heading">
+  <div class="timeline-heading-row">
+    <div>
+      <p class="eyebrow">2025 — 2022</p>
+      <h2 id="timeline-heading">Experience</h2>
+    </div>
+    <p class="timeline-instruction" id="timeline-instruction">Drag or scroll to move through the timeline →</p>
+  </div>
+
+  <div
+    class="timeline-viewport"
+    data-experience-timeline
+    role="region"
+    aria-labelledby="timeline-heading"
+    aria-describedby="timeline-instruction"
+    tabindex="0"
+  >
+    <div class="timeline-track">
+      {displayedExperiences.map((experience, index) => (
+        <article class="timeline-entry">
+          <div class="timeline-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</div>
+          <p class="timeline-date">{experience.dates}</p>
+          <h3>{experience.company}</h3>
+          <p class="timeline-role">{experience.role}</p>
+          <p class="timeline-location">{experience.location}</p>
+          <p class="timeline-summary">{experience.summary}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const timeline = document.querySelector('[data-experience-timeline]');
+
+  if (timeline instanceof HTMLElement) {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const smallScreen = window.matchMedia('(max-width: 700px)');
+    let direction = 1;
+    let lastFrame = 0;
+    let autoPosition = 0;
+    let resumeTimer;
+    let animationFrame = 0;
+    let dragging = false;
+    let dragStartX = 0;
+    let dragStartScroll = 0;
+
+    const canMoveAutomatically = () => (
+      !reducedMotion.matches &&
+      !smallScreen.matches &&
+      !document.hidden &&
+      !timeline.matches(':hover') &&
+      !timeline.matches(':focus-within')
+    );
+
+    const pause = () => {
+      window.clearTimeout(resumeTimer);
+      window.cancelAnimationFrame(animationFrame);
+      animationFrame = 0;
+      lastFrame = 0;
+      timeline.dataset.motion = 'paused';
+    };
+
+    const move = (time) => {
+      if (!canMoveAutomatically()) return pause();
+      if (!lastFrame) lastFrame = time;
+      const elapsed = Math.min(time - lastFrame, 50);
+      const firstEntry = timeline.querySelector('.timeline-entry');
+      const cardWidth = firstEntry instanceof HTMLElement ? firstEntry.offsetWidth : 320;
+      const pixelsPerMillisecond = cardWidth / 20000;
+      const end = timeline.scrollWidth - timeline.clientWidth;
+
+      autoPosition += direction * pixelsPerMillisecond * elapsed;
+
+      if (autoPosition >= end) {
+        autoPosition = end;
+        direction = -1;
+      }
+      if (autoPosition <= 0) {
+        autoPosition = 0;
+        direction = 1;
+      }
+
+      timeline.scrollLeft = autoPosition;
+      lastFrame = time;
+      animationFrame = window.requestAnimationFrame(move);
+    };
+
+    const start = () => {
+      if (!canMoveAutomatically()) return pause();
+      lastFrame = 0;
+      autoPosition = timeline.scrollLeft;
+      timeline.dataset.motion = 'running';
+      animationFrame = window.requestAnimationFrame(move);
+    };
+
+    const resumeAfter = (delay = 3500) => {
+      pause();
+      if (!canMoveAutomatically()) return;
+      timeline.dataset.motion = 'waiting';
+      resumeTimer = window.setTimeout(start, delay);
+    };
+
+    timeline.addEventListener('mouseenter', pause);
+    timeline.addEventListener('mouseleave', () => resumeAfter());
+    timeline.addEventListener('focusin', pause);
+    timeline.addEventListener('focusout', () => resumeAfter());
+    timeline.addEventListener('wheel', () => resumeAfter(), { passive: true });
+
+    timeline.addEventListener('pointerdown', (event) => {
+      pause();
+      if (event.pointerType === 'touch') return;
+      dragging = true;
+      dragStartX = event.clientX;
+      dragStartScroll = timeline.scrollLeft;
+      timeline.classList.add('is-dragging');
+      timeline.setPointerCapture(event.pointerId);
+    });
+
+    timeline.addEventListener('pointermove', (event) => {
+      if (!dragging) return;
+      timeline.scrollLeft = dragStartScroll - (event.clientX - dragStartX);
+    });
+
+    const endDrag = (event) => {
+      if (!dragging) return;
+      dragging = false;
+      timeline.classList.remove('is-dragging');
+      if (timeline.hasPointerCapture(event.pointerId)) timeline.releasePointerCapture(event.pointerId);
+      resumeAfter();
+    };
+
+    timeline.addEventListener('pointerup', endDrag);
+    timeline.addEventListener('pointercancel', endDrag);
+    timeline.addEventListener('touchstart', pause, { passive: true });
+    timeline.addEventListener('touchend', () => resumeAfter(), { passive: true });
+    document.addEventListener('visibilitychange', () => document.hidden ? pause() : resumeAfter());
+    reducedMotion.addEventListener('change', () => reducedMotion.matches ? pause() : resumeAfter());
+    smallScreen.addEventListener('change', () => smallScreen.matches ? pause() : resumeAfter());
+
+    resumeAfter(4500);
+  }
+</script>

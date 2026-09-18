@@ -1,6 +1,6 @@
 # Zachary Dutton — Portfolio v0.1
 
-A local, structural portfolio skeleton built with Astro and plain CSS. Read [PROJECT_BRIEF.md](PROJECT_BRIEF.md) before changing the design or adding content.
+A personal portfolio built with Astro and plain CSS. Read [PROJECT_BRIEF.md](PROJECT_BRIEF.md) before changing the design or adding content.
 
 ## Run locally
 
@@ -24,9 +24,10 @@ The static site is generated in `dist/`. Do not edit generated files. Astro's se
 
 ## Important files
 
-- `src/pages/index.astro`: homepage section order and placeholders.
+- `src/pages/index.astro`: homepage introduction, section order, and remaining placeholders.
 - `src/pages/work.astro`, `experience.astro`, `about.astro`: the other three pages.
 - `src/components/Header.astro`: shared navigation and Resume placeholder.
+- `src/components/ExperienceTimeline.astro`: homepage experience chronology and its small, dependency-free interaction script.
 - `src/components/Footer.astro`: shared contact area.
 - `src/layouts/BaseLayout.astro`: page document, title, metadata, and shared structure.
 - `src/styles/global.css`: all visual styles, including mobile rules and editable color variables.
@@ -38,15 +39,21 @@ The static site is generated in `dist/`. Do not edit generated files. Astro's se
 
 The first real project, Vacuum Accessory Dock, is linked from Home and Work at `/work/vacuum-accessory-dock/`. Its page uses the user's description and all five supplied images. Edit `src/pages/work/vacuum-accessory-dock.astro` for the narrative and `src/components/VacuumDockPreview.astro` for the shared preview. Image copies live in `public/images/vacuum-accessory-dock/`; the supplied originals remain unchanged.
 
-No biography, employer details, contact details, or project claims have been invented. Remaining placeholder shapes are layout spaces, not a project-card system. Resume is disabled until a document is supplied. No client JavaScript, downloaded fonts, CMS, or extra UI dependencies are needed. The system font and color values are temporary foundations.
+No biography, employer details, contact details, or project claims have been invented. Remaining placeholder shapes are layout spaces, not a project-card system. Resume is disabled until a document is supplied. The experience timeline uses a small amount of authored JavaScript; there are no downloaded fonts, CMS, or extra UI dependencies. The system font and color values are temporary foundations.
 
-All four pages use trailing slashes for directory-style static hosting. Internal links use Astro's base URL so a future repository subpath can be configured centrally. Nothing has been published or connected to GitHub yet.
+All pages use trailing slashes for directory-style static hosting. Internal links use Astro's base URL.
 
-When setting up GitHub Pages, set `site` to the actual public origin and `base` to the repository subpath if needed in `astro.config.mjs`. Configure deployment then, using the [official Astro GitHub Pages guide](https://docs.astro.build/en/guides/deploy/github/). Do not guess an account, repository name, or domain.
+## Production deployment
+
+The live site is [zdutton.com](https://zdutton.com). Production follows this path:
+
+`GitHub zdutt/portfolio` → `Vercel` → `zdutton.com`
+
+Vercel watches the `main` branch and deploys pushed commits automatically. Do not add GitHub Pages configuration. Build locally before committing and pushing.
 
 ## Next design pass
 
-Review the homepage at desktop and phone widths. Decide the hero's text/image proportions, section spacing, and how quickly Selected Work enters view. Then experiment with one real design study before defining reusable project presentation.
+Review the homepage introduction, timeline density, idle motion speed, and how quickly Selected Work enters view. The full Experience page remains a later design pass.
 
 ## Project references
 
