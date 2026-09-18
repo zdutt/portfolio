@@ -171,11 +171,15 @@ POP 4 with its turntable and global markers. The photograph of the three remotes
 cutting mat is a photograph only: Zachary confirmed he did not measure from it, and every dimension
 came from the scans. Nothing on the page may imply otherwise. The remotes gave the pocket geometry, the table gave
 the base. He modelled a single-pocket test coupon (102 x 57 x 24 mm) before committing to the full
-body (140 x 97 x 62 mm, three pockets). Photographs of the printed holder are still to come and the
-page says so; do not describe the physical result until they arrive.
+body (140 x 97 x 62 mm, three pockets). Photographs of the printed holder are still to come.
+The page no longer says so, at Zachary's instruction, but the rule stands: do not describe the
+physical result until they arrive.
 
-The two CAD images on this page are renders generated from his STL files, and the captions say
-"Render of the model" because they are not photographs and must not read as any.
+The CAD image on this page is a render generated from his STL file, and the caption says "Render of
+the model" because it is not a photograph and must not read as one. Renders are produced by loading
+the STL into three.js in headless Chromium and screenshotting the canvas, not with matplotlib: the
+matplotlib output was faceted and washed out and Zachary rejected it. The fitment coupon render was
+dropped because the pocket sits on the underside and the render showed a featureless slab.
 
 ## Design notes
 
