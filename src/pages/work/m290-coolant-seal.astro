@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+const images = `${base}images/m290-coolant/`;
+---
+<BaseLayout title="M290 Coolant Seal Repair">
+  <header class="page-intro project-intro">
+    <a href={`${base}work/`}>Back to work</a>
+    <p class="eyebrow">Repair / Machine recommissioning</p>
+    <h1>M290 Coolant Seal Repair</h1>
+    <p class="intro muted">A used EOS M290 arrived with corroded coolant sealing faces and would not run. The correct repair carried a lead time we could not absorb, so we did one we could carry out ourselves.</p>
+  </header>
+
+  <section class="project-opening" aria-labelledby="problem-heading">
+    <figure>
+      <img src={`${images}corrosion.jpg`} width="1050" height="1400" alt="Corrosion around a coolant tank on the top of the machine, with pale crusted deposits spread across the surrounding plate and fittings." fetchpriority="high" />
+      <figcaption>Corrosion around the tank before removal.</figcaption>
+    </figure>
+    <div class="project-goal">
+      <h2 id="problem-heading">A surface that could no longer seal</h2>
+      <p>The machine arrived used, and it did not run. One of the larger problems was coolant that had been leaking from the top for long enough to corrode what it sat on, including the faces the coolant tanks seal against.</p>
+      <p>A sealing face works because it is flat. This one was no longer flat, and the corrosion that had eaten into it would keep the joint leaking no matter how carefully the tanks went back on.</p>
+      <dl class="project-facts">
+        <div><dt>Problem</dt><dd>Corroded sealing faces, leaking coolant, machine not running</dd></div>
+        <div><dt>Constraint</dt><dd>Correct repair carried a lead time measured in months</dd></div>
+        <div><dt>Method</dt><dd>Strip to bare metal, fill, sand flat, repaint</dd></div>
+        <div><dt>Outcome</dt><dd>It did not leak again</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section text-step" aria-labelledby="constraint-heading">
+    <div class="process-copy">
+      <p class="eyebrow">01 / The constraint</p>
+      <h2 id="constraint-heading">The lead time decided the repair</h2>
+      <p>The correct fix meant going back to EOS and waiting out a lead time measured in months. In an R&amp;D environment a machine that is not running is money going out the door, so the useful question was not what the ideal repair would be. It was which repair we could carry out ourselves, now, that would actually hold.</p>
+      <p>This was not the standard repair and there is no point pretending otherwise. It was the one that returned a dead machine to service in-house instead of leaving it idle for a quarter.</p>
+    </div>
+  </section>
+
+  <section class="section process-step" aria-labelledby="method-heading">
+    <div class="process-copy">
+      <p class="eyebrow">02 / Method</p>
+      <h2 id="method-heading">Cut the corrosion back, then rebuild the flat</h2>
+      <p>I stripped the corroded area back to bare metal and cleaned the whole surface, then filled the pitting with JB Weld, deliberately overfilling so there was material to take away. Sanding it back established a continuous flat face again, and the area was repainted. The team worked the machine together at different points; this surface was mine.</p>
+      <p>It did not leak again.</p>
+    </div>
+    <figure>
+      <img src={`${images}sanded.jpg`} width="1050" height="1400" alt="The same area stripped to bare metal, showing a bright rectangular band of clean flat metal around the tank opening, with untouched corroded surface visible alongside it." loading="lazy" />
+      <figcaption>Stripped back to bare metal, with the untouched surface alongside for comparison.</figcaption>
+    </figure>
+  </section>
+
+  <div class="project-end"><a href={`${base}work/`}>Back to all work</a></div>
+</BaseLayout>

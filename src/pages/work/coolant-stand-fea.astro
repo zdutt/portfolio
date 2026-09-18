@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+const fea = `${base}images/coolant-stand-fea/`;
+---
+<BaseLayout title="Coolant Stand Load Verification">
+  <header class="page-intro project-intro">
+    <a href={`${base}work/`}>Back to work</a>
+    <p class="eyebrow">Structural analysis / Verification</p>
+    <h1>Coolant Stand Load Verification</h1>
+    <p class="intro muted">A welded steel stand had to be shown to hold 10,000 lbf before it went out on the floor. The analysis returned a minimum factor of safety of 0.507, and the work was deciding whether to believe it.</p>
+  </header>
+
+  <section class="project-opening" aria-labelledby="task-heading">
+    <figure>
+      <img src={`${fea}stand-cad.jpg`} width="1400" height="891" alt="Shaded CAD view of the welded steel stand: a square top plate carried on four legs braced by cut-out side panels." fetchpriority="high" />
+      <figcaption>The stand as modelled.</figcaption>
+    </figure>
+    <div class="project-goal">
+      <h2 id="task-heading">Verifying someone else's design</h2>
+      <p>A welded steel stand, designed by a colleague to carry coolant tanks, had to be shown to hold 10,000 lbf before it went out on the floor. I was asked to run the analysis, and it was the first one I had done myself.</p>
+      <p>The study was a linear static case in SolidWorks: the load applied vertically across the top plate, bonded contacts and rigid connectors standing in for the welds and bolts, and a curvature-based mesh of roughly a million nodes.</p>
+      <dl class="project-facts">
+        <div><dt>Load case</dt><dd>10,000 lbf vertical, applied across the top plate</dd></div>
+        <div><dt>Method</dt><dd>Linear static, bonded contacts and rigid connectors</dd></div>
+        <div><dt>Result</dt><dd>About 4 mm deflection, primary structure well under 100 MPa</dd></div>
+        <div><dt>Outcome</dt><dd>Submitted to EHS for on-floor approval and passed</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section process-step" aria-labelledby="fos-heading">
+    <div class="process-copy">
+      <p class="eyebrow">01 / The number that did not fit</p>
+      <h2 id="fos-heading">A minimum factor of safety of 0.507</h2>
+      <p>The factor-of-safety plot came back blue across the whole visible structure, meaning everything shown sat above 1.5. The results table reported a minimum of 0.507.</p>
+      <p>Both cannot describe a part that is fine, so the question was which one to believe. The minimum sat on a single node on an anti-crush sleeve, a spacer whose job is to take bolt preload so the joint is not crushed, rather than a member carrying load. It also sat at a bonded contact on a constrained cylindrical feature, which is a known place for a model to invent stress the real part never sees.</p>
+    </div>
+    <figure>
+      <img src={`${fea}factor-of-safety.jpg`} width="1400" height="890" alt="Factor-of-safety plot of the stand under load, rendered blue across the whole structure against a legend reading red below 1.5, blue above." loading="lazy" />
+      <figcaption>Factor of safety across the structure. The 0.507 minimum is a single node, not visible at this scale.</figcaption>
+    </figure>
+  </section>
+
+  <section class="section text-step" aria-labelledby="result-heading">
+    <div class="process-copy">
+      <p class="eyebrow">02 / Result</p>
+      <h2 id="result-heading">The number described the model, not the stand</h2>
+      <p>The structure itself carried the load with a factor of safety above ten, and most of it sat under 100 MPa, comfortably below the yield strength of the steels involved. The analysis went to EHS for on-floor approval and passed.</p>
+      <p>A solver returns a number whether or not that number means anything. Working out which ones described the part and which described the way I had set it up was the actual task.</p>
+    </div>
+  </section>
+
+  <div class="project-end"><a href={`${base}work/`}>Back to all work</a></div>
+</BaseLayout>

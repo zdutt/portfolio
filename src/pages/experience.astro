@@ -1,78 +1,43 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { experience } from '../data/experience.js';
 const base = import.meta.env.BASE_URL;
-const images = `${base}images/m290-coolant/`;
-const fea = `${base}images/coolant-stand-fea/`;
+const roles = [...experience].reverse();
 ---
 <BaseLayout title="Experience">
   <header class="page-intro">
     <p class="eyebrow">Background</p>
     <h1>Experience</h1>
-    <p class="intro muted">Six technical roles between 2022 and 2025, across metal additive manufacturing, aftermarket repair engineering, and medical-device development. Individual contributions are written up here as they are documented.</p>
+    <p class="intro muted">Six technical roles between 2022 and 2025, across metal additive manufacturing, aftermarket repair engineering, and medical-device development. Newest first.</p>
   </header>
 
-  <section class="section process-step" aria-labelledby="coolant-heading">
-    <div class="process-copy">
-      <p class="eyebrow">Metal additive manufacturing / Machine recommissioning</p>
-      <h2 id="coolant-heading">Bringing a leaking M290 back into service</h2>
-      <p>The machine arrived used, and it did not run. One of the larger problems was coolant that had been leaking from the top for long enough to corrode what it sat on, including the faces the coolant tanks seal against.</p>
-      <p>A sealing face works because it is flat. This one was no longer flat, and the corrosion that had eaten into it would keep the joint leaking no matter how carefully the tanks went back on.</p>
-    </div>
-    <figure>
-      <img src={`${images}corrosion.jpg`} width="1050" height="1400" alt="Corrosion around a coolant tank on the top of the machine, with pale crusted deposits spread across the surrounding plate and fittings." loading="lazy" />
-      <figcaption>Corrosion around the tank before removal.</figcaption>
-    </figure>
+  <section class="section role-list" aria-labelledby="roles-heading">
+    <h2 id="roles-heading" class="sr-only">Roles</h2>
+    {roles.map((entry) => (
+      <article class="role">
+        <div class="role-meta">
+          <p class="role-dates">{entry.dates}</p>
+          <p class="role-location">{entry.location}</p>
+        </div>
+        <div class="role-body">
+          <h3>{entry.company}</h3>
+          <p class="role-title">{entry.role}</p>
+          <p class="role-summary">{entry.summary}</p>
+          {entry.writeUps.length > 0 && (
+            <p class="role-writeups">
+              <span class="role-writeups-label">Written up in more detail:</span>
+              {entry.writeUps.map((item, i) => (
+                <>{i > 0 && ', '}<a href={`${base}${item.path}`}>{item.title}</a></>
+              ))}
+            </p>
+          )}
+        </div>
+      </article>
+    ))}
   </section>
 
-  <section class="section text-step" aria-labelledby="constraint-heading">
-    <h2 id="constraint-heading">The constraint decided the repair</h2>
-    <p>The correct fix meant going back to EOS and waiting out a lead time measured in months. In an R&amp;D environment a machine that is not running is money going out the door, so the useful question was not what the ideal repair would be. It was which repair we could carry out ourselves, now, that would actually hold.</p>
-    <p>This was not the standard repair and there is no point pretending otherwise. It was the one that returned a dead machine to service in-house instead of leaving it idle for a quarter.</p>
-  </section>
-
-  <section class="section process-step" aria-labelledby="method-heading">
-    <div class="process-copy">
-      <p class="eyebrow">Method</p>
-      <h2 id="method-heading">Cut the corrosion back, then rebuild the flat</h2>
-      <p>I stripped the corroded area back to bare metal and cleaned the whole surface, then filled the pitting with JB Weld, deliberately overfilling so there was material to take away. Sanding it back established a continuous flat face again, and the area was repainted. The team worked the machine together at different points; this surface was mine.</p>
-      <p>It did not leak again.</p>
-    </div>
-    <figure>
-      <img src={`${images}sanded.jpg`} width="1050" height="1400" alt="The same area stripped to bare metal, showing a bright rectangular band of clean flat metal around the tank opening, with untouched corroded surface visible alongside it." loading="lazy" />
-      <figcaption>Stripped back to bare metal, with the untouched surface alongside for comparison.</figcaption>
-    </figure>
-  </section>
-
-  <section class="section process-step" aria-labelledby="fea-heading">
-    <div class="process-copy">
-      <p class="eyebrow">Structural analysis / Verification</p>
-      <h2 id="fea-heading">Verifying a 10,000 lbf coolant tank stand</h2>
-      <p>A welded steel stand, designed by a colleague to carry coolant tanks, had to be shown to hold 10,000 lbf before it went out on the floor. I was asked to run the analysis, and it was the first one I had done myself.</p>
-      <p>The study was a linear static case in SolidWorks: the load applied vertically across the top plate, bonded contacts and rigid connectors standing in for the welds and bolts, and a curvature-based mesh of roughly a million nodes. Under load the top plate deflected about 4 mm, and the primary structure sat well under 100 MPa, comfortably below the yield strength of the steels involved.</p>
-    </div>
-    <figure>
-      <img src={`${fea}stand-cad.jpg`} width="1400" height="891" alt="Shaded CAD view of the welded steel stand: a square top plate carried on four legs braced by cut-out side panels." loading="lazy" />
-      <figcaption>The stand as modelled.</figcaption>
-    </figure>
-  </section>
-
-  <section class="section process-step" aria-labelledby="fos-heading">
-    <div class="process-copy">
-      <p class="eyebrow">The number that did not fit</p>
-      <h2 id="fos-heading">A minimum factor of safety of 0.507</h2>
-      <p>The factor-of-safety plot came back blue across the whole visible structure, meaning everything shown sat above 1.5. The results table reported a minimum of 0.507.</p>
-      <p>Both cannot describe a part that is fine, so the question was which one to believe. The minimum sat on a single node on an anti-crush sleeve, a spacer whose job is to take bolt preload so the joint is not crushed, rather than a member carrying load. It also sat at a bonded contact on a constrained cylindrical feature, which is a known place for a model to invent stress the real part never sees.</p>
-      <p>The number described the model, not the stand. The structure itself carried the load with a factor of safety above ten. The analysis went to EHS for on-floor approval and passed.</p>
-      <p>A solver returns a number whether or not that number means anything. Working out which ones described the part and which described the way I had set it up was the actual task.</p>
-    </div>
-    <figure>
-      <img src={`${fea}factor-of-safety.jpg`} width="1400" height="890" alt="Factor-of-safety plot of the stand under load, rendered blue across the whole structure against a legend reading red below 1.5, blue above." loading="lazy" />
-      <figcaption>Factor of safety across the structure. The 0.507 minimum is a single node, not visible at this scale.</figcaption>
-    </figure>
-  </section>
-
-  <section class="section text-step" aria-labelledby="more-heading">
-    <h2 id="more-heading">More to come</h2>
-    <p class="muted">Further contributions from these roles will be added here as they are written up.</p>
+  <section class="section preview" aria-labelledby="resume-heading">
+    <h2 id="resume-heading">Resume</h2>
+    <div><p class="muted">A downloadable resume will be added here.</p></div>
   </section>
 </BaseLayout>

@@ -141,3 +141,25 @@ figures above, which come from the results tables and from Zachary directly, may
 
 The colleague who designed the stand is not named on the site. The report names him; the site says
 "a colleague". Do not add the name without Zachary's explicit instruction.
+
+## Where work lives
+
+Anything with a story to tell lives under `/work/`, whether it is personal or professional. The
+Work/Experience split by employment status was dropped: the M290 latch, the coolant seal repair and
+the coolant stand FEA are all professional, and separating them from the vacuum dock served no
+reader. `/work/` is the index; each piece has its own page.
+
+`/experience/` is the professional record: the six roles, newest first, each with its supplied
+summary. Where a role has produced a written-up piece it is listed beneath, labelled "Written up in
+more detail", because those pieces are examples of work done in that role and not a summary of it.
+Zachary raised that distinction directly and the wording exists to respect it.
+
+The homepage keeps the chronological timeline unlinked for the same reason, and surfaces work
+through Selected Work: the two strongest pieces as full previews, the rest as a compact list. Do not
+link timeline entries to project pages.
+
+The six roles live in `src/data/experience.js` and are read by both the timeline component and the
+Experience page. Edit them in one place.
+
+The M290 latch is not yet assigned to a role. It is SIG SAUER work but Zachary has not said which of
+the three internships it belongs to; ask before listing it under one.

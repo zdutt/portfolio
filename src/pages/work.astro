@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectPreview from '../components/ProjectPreview.astro';
 ---
 <BaseLayout title="Work">
-  <header class="page-intro"><p class="eyebrow">Portfolio</p><h1>Work</h1><p class="intro muted">Projects and design studies.</p></header>
+  <header class="page-intro"><p class="eyebrow">Portfolio</p><h1>Work</h1><p class="intro muted">Projects and design studies, personal and professional.</p></header>
   <section class="section" aria-labelledby="selected-heading">
     <h2 id="selected-heading">Selected Work</h2>
     <ProjectPreview
@@ -23,6 +23,25 @@ import ProjectPreview from '../components/ProjectPreview.astro';
       image="images/m290-latch/latch-printed.jpg"
       alt="The redesigned latch as printed in 17-4 stainless steel, held in a hand."
       surface="photo"
+      reversed
+    />
+    <ProjectPreview
+      href="work/m290-coolant-seal/"
+      eyebrow="Repair / Machine recommissioning"
+      title="M290 Coolant Seal Repair"
+      summary="Corroded sealing faces on a used machine, rebuilt flat in-house against a months-long lead time."
+      image="images/m290-coolant/sanded.jpg"
+      alt="A coolant tank seating area stripped back to bare metal, with corroded surface alongside."
+      surface="photo"
+    />
+    <ProjectPreview
+      href="work/coolant-stand-fea/"
+      eyebrow="Structural analysis / Verification"
+      title="Coolant Stand Load Verification"
+      summary="A 10,000 lbf load case, and a factor of safety of 0.507 that turned out to describe the model."
+      image="images/coolant-stand-fea/stand-cad.jpg"
+      alt="Shaded CAD view of the welded steel coolant tank stand."
+      surface="cad"
       reversed
     />
   </section>

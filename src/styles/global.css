@@ -52,6 +52,21 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
 .text-space { min-height: 22rem; }
 .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
 .portrait-placeholder { min-height: 28rem; }
+.work-more { list-style: none; margin: 4rem 0 0; padding: 0; }
+.work-more li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 2rem; align-items: baseline; border-top: 1px solid var(--line); padding-block: 1.25rem; }
+.work-more a { font-size: 1.125rem; }
+.work-more span { font-size: 0.9375rem; }
+.role-list { display: flex; flex-direction: column; }
+.role { display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); gap: 3rem; padding-block: 2.5rem; border-top: 1px solid var(--line); }
+.role:first-of-type { border-top: 0; padding-top: 0; }
+.role-meta p { margin-top: 0; }
+.role-dates, .role-location { color: var(--muted); font-size: 0.8125rem; letter-spacing: 0.035em; }
+.role-location { margin-top: 0.4rem; }
+.role-body h3 { margin: 0; font-size: 1.35rem; font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
+.role-title { margin-top: 0.35rem; font-weight: 600; }
+.role-summary { margin-top: 1rem; color: var(--muted); }
+.role-writeups { margin-top: 1.25rem; font-size: 0.9375rem; }
+.role-writeups-label { color: var(--muted); margin-right: 0.5rem; }
 .site-footer { border-top: 1px solid var(--line); padding-block: 3rem; display: flex; justify-content: space-between; align-items: end; gap: 2rem; }
 .site-footer p { margin-top: 1rem; }
 .contact-links { display: flex; gap: 2rem; list-style: none; margin: 1rem 0 0; padding: 0; }
@@ -132,6 +147,9 @@ figcaption { color: var(--muted); font-size: 0.875rem; margin-top: 0.75rem; max-
   .notes-placeholder { width: 100%; }
   .preview, .about-layout { grid-template-columns: 1fr; gap: 1.5rem; }
   .portrait-placeholder { min-height: 20rem; }
+  .work-more li { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
+  .work-more { margin-top: 3rem; }
+  .role { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
   .site-footer { align-items: flex-start; flex-direction: column; }
   .contact-links { flex-direction: column; gap: 0.5rem; }
 }
