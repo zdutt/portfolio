@@ -120,3 +120,24 @@ Not established and not to be invented: coolant chemistry, substrate alloy, how 
 expected to last, machine downtime, dates beyond the summer, or any claim that this was an approved
 or standard procedure. The page states plainly that it was not the standard repair. The employer is
 left implicit here, consistent with the M290 latch page.
+
+## Experience page: coolant tank stand FEA
+
+The second contribution on `/experience/`. Confirmed facts: a welded steel stand designed by a
+colleague to carry coolant tanks had to be shown to hold 10,000 lbf before going out on the floor.
+Zachary ran the analysis, his first. Linear static study in SolidWorks, load applied vertically
+across the top plate, bonded contacts and rigid connectors in place of welds and bolts,
+curvature-based mesh of roughly a million nodes. Top plate deflection about 4 mm; primary structure
+well under 100 MPa. The automatic factor-of-safety minimum reported 0.507 at a single node on an
+anti-crush sleeve, which takes bolt preload rather than carrying load, at a bonded contact on a
+constrained cylindrical feature. The page states that this described the model rather than the
+stand, that the structure carried the load with a factor of safety above ten, and that the analysis
+went to EHS for on-floor approval and passed.
+
+Two images are taken from the supplied report: the shaded CAD view of the stand, and the
+factor-of-safety plot. The report itself is not published and is not to be quoted. Its executive
+summary contradicts its own results table and contains an unfilled template placeholder; only the
+figures above, which come from the results tables and from Zachary directly, may be used.
+
+The colleague who designed the stand is not named on the site. The report names him; the site says
+"a colleague". Do not add the name without Zachary's explicit instruction.
