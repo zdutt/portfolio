@@ -63,8 +63,9 @@ Important locations:
 
 - `src/pages/index.astro` — homepage composition and copy
 - `src/components/ExperienceTimeline.astro` — timeline data and interaction
-- `src/components/VacuumDockPreview.astro` — shared Vacuum Accessory Dock preview
+- `src/components/ProjectPreview.astro` — shared project preview used on Home and Work
 - `src/pages/work/vacuum-accessory-dock.astro` — full project story
+- `src/pages/work/m290-latch.astro` — full project story
 - `src/styles/global.css` — site-wide visual system and responsive rules
 - `public/images/` — optimized site images grouped by project where appropriate
 - `PROJECT_BRIEF.md` — lasting product decisions and factual context
@@ -90,6 +91,11 @@ npm run dev
 ```
 
 The local site normally runs at `http://127.0.0.1:4321/`.
+
+`node_modules` holds native binaries for whichever platform ran `npm install`. Windows and Linux
+bindings for rolldown, satteri, esbuild, sharp, lightningcss, and the Astro compiler are installed
+side by side so the project builds from either. Running `npm ci` or `npm install` on Windows prunes
+the Linux ones; reinstall them if a Linux build then fails to find a native module.
 
 Before committing:
 

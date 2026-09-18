@@ -1,12 +1,30 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import VacuumDockPreview from '../components/VacuumDockPreview.astro';
+import ProjectPreview from '../components/ProjectPreview.astro';
 ---
 <BaseLayout title="Work">
   <header class="page-intro"><p class="eyebrow">Portfolio</p><h1>Work</h1><p class="intro muted">Projects and design studies.</p></header>
   <section class="section" aria-labelledby="selected-heading">
     <h2 id="selected-heading">Selected Work</h2>
-    <VacuumDockPreview />
+    <ProjectPreview
+      href="work/vacuum-accessory-dock/"
+      eyebrow="Design study / Reverse engineering"
+      title="Vacuum Accessory Dock"
+      summary="From a scanned accessory connection to a custom, wall-mountable dock."
+      image="images/vacuum-accessory-dock/final-cad.png"
+      alt="Final CAD model of the two-socket vacuum accessory dock."
+      surface="cad"
+    />
+    <ProjectPreview
+      href="work/m290-latch/"
+      eyebrow="Redesign / Metal additive manufacturing"
+      title="M290 Latch Redesign"
+      summary="A worn latch was failing the machine's pressure and purge tests. Shortening it fixed them."
+      image="images/m290-latch/latch-printed.jpg"
+      alt="The redesigned latch as printed in 17-4 stainless steel, held in a hand."
+      surface="photo"
+      reversed
+    />
   </section>
   <section class="section" aria-labelledby="studies-heading">
     <h2 id="studies-heading">Smaller Work / Design Notes</h2>

@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+const images = `${base}images/m290-latch/`;
+---
+<BaseLayout title="M290 Latch Redesign">
+  <header class="page-intro project-intro">
+    <a href={`${base}work/`}>Back to work</a>
+    <p class="eyebrow">Redesign / Metal additive manufacturing</p>
+    <h1>M290 Latch Redesign</h1>
+    <p class="intro muted">A worn latch on an EOS M290 was letting the machine fail its pressure and purge tests by a narrow margin. I redesigned the part, had it printed in 17-4, and the tests passed again.</p>
+  </header>
+
+  <section class="project-opening" aria-labelledby="goal-heading">
+    <figure>
+      <img src={`${images}latch-printed.jpg`} width="1050" height="1400" alt="The redesigned latch as printed in 17-4 stainless steel, held in a hand. The matte sintered surface, two counterbored mounting holes, and the raised engagement feature are visible." fetchpriority="high" />
+      <figcaption>The redesigned latch, as printed in 17-4.</figcaption>
+    </figure>
+    <div class="project-goal">
+      <h2 id="goal-heading">A small part failing a large machine</h2>
+      <p>The latch had worn to the point where it no longer drew its closure tight. The machine was still running, but its pressure and purge tests were failing — not dramatically, just consistently short.</p>
+      <p>The fix had to restore sealing without changing anything the latch mounts to, so the work was deliberately narrow: keep the interface, change the engagement.</p>
+      <dl class="project-facts">
+        <div><dt>Problem</dt><dd>Worn latch, inadequate closure, failing pressure and purge tests</dd></div>
+        <div><dt>Change</dt><dd>Shortened the latch to tighten the closure</dd></div>
+        <div><dt>Material</dt><dd>17-4 stainless steel, printed</dd></div>
+        <div><dt>Outcome</dt><dd>Tests passed after the replacement was fitted</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section process-step" aria-labelledby="diagnose-heading">
+    <div class="process-copy">
+      <p class="eyebrow">01 / Diagnose</p>
+      <h2 id="diagnose-heading">Trace the failure to the latch</h2>
+      <p>A narrow, repeatable failure is a different signal from an intermittent one. The tests were not swinging — they were landing just under the threshold every time, which pointed at a fixed loss rather than a fault appearing and disappearing.</p>
+      <p>The latch was the wear item in that path. With the closure no longer being pulled fully home, the seal it was responsible for was giving up a small, constant amount.</p>
+    </div>
+    <figure>
+      <img src={`${images}m290.jpg`} width="1050" height="1400" alt="An EOS M290 metal additive manufacturing machine on the production floor, with its control screen and extraction hose visible." loading="lazy" />
+      <figcaption>The EOS M290 the latch belongs to.</figcaption>
+    </figure>
+  </section>
+
+  <section class="section text-step" aria-labelledby="redesign-heading">
+    <div class="process-copy">
+      <p class="eyebrow">02 / Redesign</p>
+      <h2 id="redesign-heading">Shorten the engagement rather than redraw the part</h2>
+      <p>I shortened the latch so that closing it drew the joint tighter than the worn original could. Everything else stayed as it was: the same mounting holes, the same envelope, the same way of operating it.</p>
+      <p>That restraint was the point. A replacement that changes only the dimension responsible for the problem can be swapped in without re-qualifying anything around it, and it makes the result easy to attribute — if the tests pass afterwards, the shortened engagement is why.</p>
+    </div>
+  </section>
+
+  <section class="section text-step" aria-labelledby="result-heading">
+    <div class="process-copy">
+      <p class="eyebrow">03 / Manufacture and verify</p>
+      <h2 id="result-heading">Print it in 17-4 and re-run the tests</h2>
+      <p>The replacement was printed in 17-4 stainless steel — a sensible choice for a small, repeatedly loaded part on a machine that already had metal additive manufacturing available to it.</p>
+      <p>With the new latch fitted, the machine passed its pressure and purge tests. The part in the photograph above is the one that came off the build.</p>
+    </div>
+  </section>
+
+  <div class="project-end"><a href={`${base}work/`}>Back to all work</a></div>
+</BaseLayout>

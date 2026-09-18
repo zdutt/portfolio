@@ -64,3 +64,39 @@ The dedicated preview component only shares this project's presentation between 
 The user supplied the factual chronology and copy for six roles from June 2022 through August 2025. Display the entries newest-to-oldest so the most recent technical experience appears first, and preserve the supplied meaning. Use uniform entry widths and marker styling. The three SIG SAUER internships retain `/ 01`, `/ 02`, and `/ 03` in their company labels to communicate sequence without giving those entries a different visual treatment.
 
 The timeline uses native horizontal overflow plus a small authored script for mouse dragging and extremely slow idle movement on desktop. It reverses at the ends, pauses for interaction, disables automatic movement on small screens, and respects `prefers-reduced-motion`. Keep manual scrolling primary and do not add a carousel or animation dependency.
+
+## Second project: M290 Latch Redesign
+
+A worn latch on an EOS M290 was no longer drawing its closure tight, and the machine's pressure and
+purge tests were failing by a narrow, repeatable margin. Zachary shortened the latch so that closing
+it tightened the joint, kept the mounting interface unchanged, and had the replacement printed in
+17-4. The tests passed once it was fitted.
+
+Confirmed facts stop there. No dimensional change, tolerance, print machine, heat treatment, build
+orientation, date, or iteration count was recorded, and none may be inferred. A second photograph
+in the source folder, `M290 Latch (worse)`, shows a different, polished latch with a fastener
+fitted; it is not described in the supplied photo guide and must not be captioned as the original
+part until Zachary confirms what it is.
+
+## Project previews
+
+`VacuumDockPreview.astro` was replaced by `ProjectPreview.astro`, which takes props and is used for
+both projects on Home and Work. Previews alternate: the dock places its image left on a dark panel,
+the latch places its image right on a light panel. This is deliberate editorial rhythm, not the
+beginning of a card system, and it is not a commitment for future projects.
+
+## Source material and publication limits
+
+The wider photo archive at `Desktop/Personal/3D Printer/Completed Projects/Photo Dump` is reference
+material, not approved content. Several items are excluded from the site by decision: SIG SAUER
+suppressor build and depowdering photographs, the oversized-particle thermal event, and the
+templated FEA report itself. The Pirouette internship deck may inform prose but its part
+nomenclature, MFG document numbers, and embedded Onshape link must never be published.
+
+The coolant-table FEA report contains internal contradictions: its executive summary states that
+yield is not exceeded while the results table reports 621.3 MPa against yield strengths of 250 and
+351.6 MPa, it contains an unfilled `[connection or component]` placeholder, and its summary and
+conclusion disagree on whether further work is needed. The report is not to be published or quoted.
+The analysis itself is sound and may be described in Zachary's own words. The cover page records
+Designer: John Campbell, FEA: Zachary Dutton — the fixture design is not his and must not be
+presented as his.
