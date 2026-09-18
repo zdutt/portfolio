@@ -18,7 +18,7 @@ const images = `${base}images/m290-latch/`;
     </figure>
     <div class="project-goal">
       <h2 id="goal-heading">A small part failing a large machine</h2>
-      <p>The latch had worn to the point where it no longer drew its closure tight. The machine was still running, but its pressure and purge tests were failing — not dramatically, just consistently short.</p>
+      <p>The latch had worn to the point where it no longer drew its closure tight. The machine was still running, but its pressure and purge tests were failing. Not dramatically, just consistently short.</p>
       <p>The fix had to restore sealing without changing anything the latch mounts to, so the work was deliberately narrow: keep the interface, change the engagement.</p>
       <dl class="project-facts">
         <div><dt>Problem</dt><dd>Worn latch, inadequate closure, failing pressure and purge tests</dd></div>
@@ -33,7 +33,7 @@ const images = `${base}images/m290-latch/`;
     <div class="process-copy">
       <p class="eyebrow">01 / Diagnose</p>
       <h2 id="diagnose-heading">Trace the failure to the latch</h2>
-      <p>A narrow, repeatable failure is a different signal from an intermittent one. The tests were not swinging — they were landing just under the threshold every time, which pointed at a fixed loss rather than a fault appearing and disappearing.</p>
+      <p>A narrow, repeatable failure is a different signal from an intermittent one. The tests were not swinging. They were landing just under the threshold every time, which pointed at a fixed loss rather than a fault appearing and disappearing.</p>
       <p>The latch was the wear item in that path. With the closure no longer being pulled fully home, the seal it was responsible for was giving up a small, constant amount.</p>
     </div>
     <figure>
@@ -42,20 +42,24 @@ const images = `${base}images/m290-latch/`;
     </figure>
   </section>
 
-  <section class="section text-step" aria-labelledby="redesign-heading">
+  <section class="section process-step" aria-labelledby="redesign-heading">
     <div class="process-copy">
       <p class="eyebrow">02 / Redesign</p>
       <h2 id="redesign-heading">Shorten the engagement rather than redraw the part</h2>
       <p>I shortened the latch so that closing it drew the joint tighter than the worn original could. Everything else stayed as it was: the same mounting holes, the same envelope, the same way of operating it.</p>
-      <p>That restraint was the point. A replacement that changes only the dimension responsible for the problem can be swapped in without re-qualifying anything around it, and it makes the result easy to attribute — if the tests pass afterwards, the shortened engagement is why.</p>
+      <p>That restraint was the point. A replacement that changes only the dimension responsible for the problem can be swapped in without re-qualifying anything around it, and it makes the result easy to attribute. If the tests pass afterwards, the shortened engagement is why.</p>
     </div>
+    <figure>
+      <img src={`${images}latch-original.jpg`} width="1050" height="1400" alt="The original latch, held in a hand with a mounting screw still fitted, its surface bright and polished from use." loading="lazy" />
+      <figcaption>The original latch it replaced.</figcaption>
+    </figure>
   </section>
 
   <section class="section text-step" aria-labelledby="result-heading">
     <div class="process-copy">
       <p class="eyebrow">03 / Manufacture and verify</p>
       <h2 id="result-heading">Print it in 17-4 and re-run the tests</h2>
-      <p>The replacement was printed in 17-4 stainless steel — a sensible choice for a small, repeatedly loaded part on a machine that already had metal additive manufacturing available to it.</p>
+      <p>The replacement was printed in 17-4 stainless steel, a sensible choice for a small, repeatedly loaded part on a machine that already had metal additive manufacturing available to it.</p>
       <p>With the new latch fitted, the machine passed its pressure and purge tests. The part in the photograph above is the one that came off the build.</p>
     </div>
   </section>

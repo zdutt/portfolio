@@ -1,4 +1,4 @@
-# Zachary Dutton — Portfolio brief
+# Zachary Dutton: portfolio brief
 
 ## Source of truth
 
@@ -34,10 +34,10 @@ No React, Vue, Svelte, Tailwind, Bootstrap, UI/component libraries, animation li
 
 ## Current sitemap
 
-- `/` — headshot and concise factual profile, horizontally scrollable experience chronology, Selected Work, Smaller Work / Design Notes, About preview, shared footer/contact area.
-- `/work/` — spaces for selected work and smaller studies.
-- `/experience/` — professional background placeholder, eventually complementing the resume.
-- `/about/` — personal introduction/background and a photograph placeholder.
+- `/`: headshot and concise factual profile, horizontally scrollable experience chronology, Selected Work, Smaller Work / Design Notes, About preview, shared footer/contact area.
+- `/work/`: spaces for selected work and smaller studies.
+- `/experience/`: professional background placeholder, eventually complementing the resume.
+- `/about/`: personal introduction/background and a photograph placeholder.
 - Resume is a visibly muted, disabled navigation placeholder until a real document exists. No Resume page.
 - Contact belongs in the footer/About area; no separate Contact route.
 
@@ -73,10 +73,10 @@ it tightened the joint, kept the mounting interface unchanged, and had the repla
 17-4. The tests passed once it was fitted.
 
 Confirmed facts stop there. No dimensional change, tolerance, print machine, heat treatment, build
-orientation, date, or iteration count was recorded, and none may be inferred. A second photograph
-in the source folder, `M290 Latch (worse)`, shows a different, polished latch with a fastener
-fitted; it is not described in the supplied photo guide and must not be captioned as the original
-part until Zachary confirms what it is.
+orientation, date, or iteration count was recorded, and none may be inferred. The second photograph in the source
+folder, `M290 Latch (worse)`, is the original latch, confirmed by Zachary. It appears on the project
+page as the part the redesign replaced. Nothing about the extent of its wear is claimed beyond
+what he stated.
 
 ## Project previews
 
@@ -98,5 +98,5 @@ yield is not exceeded while the results table reports 621.3 MPa against yield st
 351.6 MPa, it contains an unfilled `[connection or component]` placeholder, and its summary and
 conclusion disagree on whether further work is needed. The report is not to be published or quoted.
 The analysis itself is sound and may be described in Zachary's own words. The cover page records
-Designer: John Campbell, FEA: Zachary Dutton — the fixture design is not his and must not be
+Designer: John Campbell, FEA: Zachary Dutton. The fixture design is not his and must not be
 presented as his.

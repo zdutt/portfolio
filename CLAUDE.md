@@ -1,4 +1,4 @@
-# Claude guide — Zachary Dutton portfolio
+# Claude guide: Zachary Dutton portfolio
 
 This file is the working handoff for Claude. Read it, `PROJECT_BRIEF.md`, and the current code before making changes. Keep this file updated when the project direction materially changes.
 
@@ -61,14 +61,14 @@ Avoid:
 
 Important locations:
 
-- `src/pages/index.astro` — homepage composition and copy
-- `src/components/ExperienceTimeline.astro` — timeline data and interaction
-- `src/components/ProjectPreview.astro` — shared project preview used on Home and Work
-- `src/pages/work/vacuum-accessory-dock.astro` — full project story
-- `src/pages/work/m290-latch.astro` — full project story
-- `src/styles/global.css` — site-wide visual system and responsive rules
-- `public/images/` — optimized site images grouped by project where appropriate
-- `PROJECT_BRIEF.md` — lasting product decisions and factual context
+- `src/pages/index.astro`: homepage composition and copy
+- `src/components/ExperienceTimeline.astro`: timeline data and interaction
+- `src/components/ProjectPreview.astro`: shared project preview used on Home and Work
+- `src/pages/work/vacuum-accessory-dock.astro`: full project story
+- `src/pages/work/m290-latch.astro`: full project story
+- `src/styles/global.css`: site-wide visual system and responsive rules
+- `public/images/`: optimized site images grouped by project where appropriate
+- `PROJECT_BRIEF.md`: lasting product decisions and factual context
 
 ## How to add a project
 

@@ -1,4 +1,4 @@
-# Zachary Dutton — Portfolio v0.1
+# Zachary Dutton: portfolio v0.1
 
 A personal portfolio built with Astro and plain CSS. Read [PROJECT_BRIEF.md](PROJECT_BRIEF.md) before changing the design or adding content.
 
