@@ -52,6 +52,13 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
 .text-space { min-height: 22rem; }
 .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
 .portrait-placeholder { min-height: 28rem; }
+.credentials { list-style: none; margin: 2rem 0 0; padding: 0; }
+.credentials li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 2rem; align-items: baseline; border-top: 1px solid var(--line); padding-block: 1.25rem; }
+.credential-name { font-size: 1.0625rem; }
+.credentials span.muted { font-size: 0.9375rem; }
+.design-notes { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin: 2rem 0 0; padding: 0; }
+.design-note h3 { margin: 1.5rem 0 0; font-size: 1.25rem; font-weight: 400; letter-spacing: -0.02em; }
+.design-note p { margin-top: 0.75rem; font-size: 0.9375rem; }
 .work-more { list-style: none; margin: 4rem 0 0; padding: 0; }
 .work-more li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 2rem; align-items: baseline; border-top: 1px solid var(--line); padding-block: 1.25rem; }
 .work-more a { font-size: 1.125rem; }
@@ -147,6 +154,8 @@ figcaption { color: var(--muted); font-size: 0.875rem; margin-top: 0.75rem; max-
   .notes-placeholder { width: 100%; }
   .preview, .about-layout { grid-template-columns: 1fr; gap: 1.5rem; }
   .portrait-placeholder { min-height: 20rem; }
+  .credentials li { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
+  .design-notes { grid-template-columns: 1fr; gap: 3rem; }
   .work-more li { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
   .work-more { margin-top: 3rem; }
   .role { grid-template-columns: minmax(0, 1fr); gap: 1rem; }

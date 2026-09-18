@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectPreview from '../components/ProjectPreview.astro';
+import DesignNotes from '../components/DesignNotes.astro';
 ---
 <BaseLayout title="Work">
   <header class="page-intro"><p class="eyebrow">Portfolio</p><h1>Work</h1><p class="intro muted">Projects and design studies, personal and professional.</p></header>
@@ -35,6 +36,15 @@ import ProjectPreview from '../components/ProjectPreview.astro';
       surface="photo"
     />
     <ProjectPreview
+      href="work/remote-holder/"
+      eyebrow="Design study / Reverse engineering"
+      title="Remote Holder"
+      summary="Three remotes, three shapes. Scanning the remotes and the table they sit on gave the geometry for one holder."
+      image="images/remote-holder/remotes.jpg"
+      alt="Three remotes laid out on a gridded cutting mat, photographed from above."
+      surface="photo"
+    />
+    <ProjectPreview
       href="work/coolant-stand-fea/"
       eyebrow="Structural analysis / Verification"
       title="Coolant Stand Load Verification"
@@ -47,7 +57,7 @@ import ProjectPreview from '../components/ProjectPreview.astro';
   </section>
   <section class="section" aria-labelledby="studies-heading">
     <h2 id="studies-heading">Smaller Work / Design Notes</h2>
-    <p class="muted">A space for focused studies and smaller explorations.</p>
-    <div class="placeholder notes-placeholder"><span>Design study / Placeholder</span></div>
+    <p class="muted">One-off parts, each solving a single fitment problem.</p>
+    <DesignNotes />
   </section>
 </BaseLayout>

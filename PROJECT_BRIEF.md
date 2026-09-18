@@ -163,3 +163,37 @@ Experience page. Edit them in one place.
 
 The M290 latch is not yet assigned to a role. It is SIG SAUER work but Zachary has not said which of
 the three internships it belongs to; ask before listing it under one.
+
+## Remote Holder
+
+Zachary scanned each of three remotes and, separately, the side table they sit on, using a Revopoint
+POP 4 with its turntable and global markers. The remotes gave the pocket geometry, the table gave
+the base. He modelled a single-pocket test coupon (102 x 57 x 24 mm) before committing to the full
+body (140 x 97 x 62 mm, three pockets). Photographs of the printed holder are still to come and the
+page says so; do not describe the physical result until they arrive.
+
+The two CAD images on this page are renders generated from his STL files, and the captions say
+"Render of the model" because they are not photographs and must not read as any.
+
+## Design notes
+
+Filament shelf: Zachary saw a filament holder design online, liked it, and modelled his own instead
+of printing it. The original was built around 28 mm timber, not a US size, so his bracket was sized
+around dowels he could buy, and a printed collar checked the fit first. His design, not a derivative
+of the downloaded file; the note credits the idea without naming the original.
+
+Towel hook: scanned the curved bathroom drawer front, took the curvature from the scan, modelled a
+hook whose back face follows it, replacing a generic hook that only contacted in one place.
+
+## Training and certification
+
+Certified SolidWorks Associate: Zachary holds this. A GD&T course taken while at Pratt & Whitney is
+listed with no further detail. He recalls the instructor contributed to a standard and has a book,
+but has not yet confirmed the name, so nothing about the instructor appears on the site. Do not add
+it until he supplies the reference.
+
+## Not on the site
+
+The FlashDrive folder is 2020 to 2022 SolidWorks coursework. Its drawings carry empty title blocks
+and no dimensions or tolerances, so they demonstrate nothing and stay off. The turntable project is
+incomplete. Thingiverse Junk is downloaded models and is not his work.

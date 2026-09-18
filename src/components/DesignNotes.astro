@@ -1,0 +1,30 @@
+---
+const base = import.meta.env.BASE_URL;
+const notes = [
+  {
+    image: 'images/design-notes/filament-shelf.jpg',
+    width: 1400, height: 1050,
+    alt: 'Wall-mounted filament shelf: two printed black brackets carrying a pair of wooden dowels with two filament spools on them, above a 3D printer.',
+    title: 'Filament shelf brackets',
+    body: 'I found a filament holder design online, liked the idea, and modelled my own rather than printing theirs. The original was built around 28 mm timber, which is not a size a US hardware store sells, so the bracket had to be sized around dowels I could actually buy. A small printed collar checked the dowel fit before I committed to a pair of brackets.',
+  },
+  {
+    image: 'images/design-notes/towel-hook.jpg',
+    width: 1400, height: 1400,
+    alt: 'Render of a towel hook with a curved back face, shaped to sit against a curved drawer front.',
+    title: 'Towel hook for a curved drawer',
+    body: 'The bathroom drawer front is curved, and the generic hooks we were using only ever touched it in one place. I scanned the drawer, took the curvature off the scan, and modelled a hook whose back face follows it, so it sits against the front instead of rocking on it.',
+  },
+];
+---
+<ul class="design-notes">
+  {notes.map((note) => (
+    <li class="design-note">
+      <figure>
+        <img src={`${base}${note.image}`} width={note.width} height={note.height} alt={note.alt} loading="lazy" />
+      </figure>
+      <h3>{note.title}</h3>
+      <p class="muted">{note.body}</p>
+    </li>
+  ))}
+</ul>
