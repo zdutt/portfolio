@@ -188,6 +188,13 @@ of printing it. The original was built around 28 mm timber, not a US size, so hi
 around dowels he could buy, and a printed collar checked the fit first. His design, not a derivative
 of the downloaded file; the note credits the idea without naming the original.
 
+Bed sensor repair: the bed level sensors on Zachary's FlashForge Adventurer 5M failed, the printer
+stopped getting a probe measurement, and the head kept driving into the plate. He stripped it down,
+cleaned the boards and connections, retightened the belts, and on reinstalling the pressure sensors
+had no factory torque spec, so he ran a system recalibration and let the machine re-zero against the
+torque he had applied rather than guessing at the original preload. It has printed correctly since.
+The Smaller Work standfirst reads "One-off parts and small repairs" so a repair fits the section.
+
 Towel hook: scanned the curved bathroom drawer front, took the curvature from the scan, modelled a
 hook whose back face follows it, replacing a generic hook that only contacted in one place.
 

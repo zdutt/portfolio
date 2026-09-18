@@ -15,6 +15,13 @@ const notes = [
     title: 'Towel hook for a curved drawer',
     body: 'The bathroom drawer front is curved, and the generic hooks we were using only ever touched it in one place. I scanned the drawer, took the curvature off the scan, and modelled a hook whose back face follows it, so it sits against the front instead of rocking on it.',
   },
+  {
+    image: 'images/design-notes/printer-bed-sensors.jpg',
+    width: 1050, height: 1400,
+    alt: 'The underside of a 3D printer bed lifted out of the machine, showing the four corner bed sensors, the wiring harness running back to a small board, and a precision screwdriver resting on the build plate.',
+    title: 'Bed sensor repair, FlashForge Adventurer 5M',
+    body: 'The bed level sensors failed, so the printer stopped getting a probe measurement and kept driving the head into the plate. I stripped it down, cleaned the boards and connections, and retightened the belts. Reinstalling the pressure sensors was the real problem: with no factory torque spec I could not reproduce the original preload, so rather than guess I ran a system recalibration and let the machine re-zero against the torque I had actually applied. It has printed correctly since.',
+  },
 ];
 ---
 <ul class="design-notes">
