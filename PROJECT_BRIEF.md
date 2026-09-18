@@ -167,7 +167,9 @@ the three internships it belongs to; ask before listing it under one.
 ## Remote Holder
 
 Zachary scanned each of three remotes and, separately, the side table they sit on, using a Revopoint
-POP 4 with its turntable and global markers. The remotes gave the pocket geometry, the table gave
+POP 4 with its turntable and global markers. The photograph of the three remotes on a gridded
+cutting mat is a photograph only: Zachary confirmed he did not measure from it, and every dimension
+came from the scans. Nothing on the page may imply otherwise. The remotes gave the pocket geometry, the table gave
 the base. He modelled a single-pocket test coupon (102 x 57 x 24 mm) before committing to the full
 body (140 x 97 x 62 mm, three pockets). Photographs of the printed holder are still to come and the
 page says so; do not describe the physical result until they arrive.
