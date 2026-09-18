@@ -96,9 +96,9 @@ figcaption { color: var(--muted); font-size: 0.875rem; margin-top: 0.75rem; max-
 .timeline-viewport::-webkit-scrollbar { display: none; }
 .timeline-viewport:focus-visible { outline: 2px solid var(--ink); outline-offset: 0.5rem; }
 .timeline-viewport.is-dragging { cursor: grabbing; }
-.timeline-track { display: flex; width: max-content; min-width: 100%; position: relative; }
+.timeline-track { display: flex; gap: 2.5rem; width: max-content; min-width: 100%; position: relative; }
 .timeline-track::before { content: ''; position: absolute; top: 1.25rem; left: 0; right: 0; border-top: 1px solid var(--ink); }
-.timeline-entry { position: relative; flex: 0 0 22rem; padding: 4rem 2.5rem 0 0; }
+.timeline-entry { position: relative; flex: 0 0 19.5rem; padding: 4rem 0 0; }
 .timeline-entry::before { content: ''; position: absolute; top: 0.98rem; left: 0; width: 0.55rem; height: 0.55rem; border: 1px solid var(--ink); background: var(--paper); transform: rotate(45deg); }
 .timeline-index, .timeline-date, .timeline-location { color: var(--muted); font-size: 0.8125rem; letter-spacing: 0.035em; }
 .timeline-index { position: absolute; top: 0.8rem; left: 1.25rem; }
@@ -118,7 +118,7 @@ figcaption { color: var(--muted); font-size: 0.875rem; margin-top: 0.75rem; max-
   .home-intro-copy { margin-top: 1.5rem; }
   .timeline-heading-row { align-items: flex-start; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
   .timeline-instruction { text-align: left; }
-  .timeline-entry { flex-basis: min(82vw, 20rem); }
+  .timeline-entry { flex-basis: calc(min(82vw, 20rem) - 2.5rem); }
   .site-header { flex-direction: column; align-items: flex-start; gap: 1rem; padding-block: 1.5rem; }
   nav ul { column-gap: 1.25rem; row-gap: 0.5rem; }
   nav { font-size: 0.8125rem; }
