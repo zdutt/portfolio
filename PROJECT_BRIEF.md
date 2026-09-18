@@ -100,3 +100,23 @@ conclusion disagree on whether further work is needed. The report is not to be p
 The analysis itself is sound and may be described in Zachary's own words. The cover page records
 Designer: John Campbell, FEA: Zachary Dutton. The fixture design is not his and must not be
 presented as his.
+
+## Experience page: M290 coolant seal repair
+
+The first written-up contribution on `/experience/`. Confirmed facts, supplied by Zachary: the M290
+arrived used and would not run; coolant had been leaking from the top long enough to corrode the
+surfaces beneath it, including the faces the coolant tanks seal against. The correct repair meant an
+EOS lead time measured in months, which an R&D environment could not absorb, so the team repaired it
+in-house. Zachary stripped the corroded area to bare metal, cleaned it, filled the pitting with JB
+Weld, deliberately overfilled, sanded it back flat and repainted. The team worked the machine
+together at different points; the surface work was his. It did not leak again. Summer 2025.
+
+Two photographs are used: the corrosion before removal, and the area stripped to bare metal showing
+the rectangular band of clean flat metal. There is no finished photograph and none is needed, since
+the completed repair is paint over epoxy and shows nothing. Do not add a closing image implying the
+machine back in service unless Zachary confirms one depicts this machine after the repair.
+
+Not established and not to be invented: coolant chemistry, substrate alloy, how long the repair was
+expected to last, machine downtime, dates beyond the summer, or any claim that this was an approved
+or standard procedure. The page states plainly that it was not the standard repair. The employer is
+left implicit here, consistent with the M290 latch page.
