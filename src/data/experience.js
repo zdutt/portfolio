@@ -20,7 +20,7 @@ export const experience = [
   },
   {
     dates: 'May 2024 – Aug 2024',
-    company: 'SIG SAUER / 01',
+    company: 'Sig Sauer / 01',
     role: 'Additive Manufacturing Intern',
     location: 'Exeter, New Hampshire',
     summary: 'Supported EOS M290/M400 metal additive production from build preparation through post-processing. Worked with machine setup, powder handling, build recovery, wire EDM, cleaning, inspection handoff, and production traceability.',
@@ -28,7 +28,7 @@ export const experience = [
   },
   {
     dates: 'Dec 2024 – Jan 2025',
-    company: 'SIG SAUER / 02',
+    company: 'Sig Sauer / 02',
     role: 'Additive Manufacturing Intern',
     location: 'Exeter, New Hampshire',
     summary: 'Returned as new powder-handling and automation equipment was added to the additive cell. Helped integrate Grenzebach and Volkmann equipment, develop operating procedures, expand process documentation, and support troubleshooting of the new workflows.',
@@ -39,16 +39,16 @@ export const experience = [
     company: 'Pratt & Whitney',
     role: 'Aftermarket Sustainment Engineer Co-Op',
     location: 'North Berwick, Maine',
-    summary: 'Supported repair engineering for commercial gas-turbine hardware. Developed and revised CAD, drawings, repair limits, instructions, and shop-floor documentation while working with repair technicians, MRB, and manufacturing stakeholders.',
+    summary: 'Supported aftermarket sustainment engineering for commercial gas-turbine hardware. Developed and revised CAD, drawings, repair limits, instructions, and shop-floor documentation while working with repair technicians, MRB, and manufacturing stakeholders.',
     writeUps: [],
   },
   {
     dates: 'May 2025 – Aug 2025',
-    company: 'SIG SAUER / 03',
+    company: 'Sig Sauer / 03',
     role: 'Additive Manufacturing Intern',
     location: 'Exeter, New Hampshire',
     summary: 'Returned for a third internship as the metal additive operation expanded. Helped integrate three additional EOS M400 systems, supported M290/M400 production, designed build plates and fixtures, developed process controls and documentation, and supported powder-reclaim and downstream manufacturing improvements.',
-    // The latch is not listed here: it is SIG SAUER work but Zachary has not said
+    // The latch is not listed here: it is Sig Sauer work but Zachary has not said
     // which of the three internships it belongs to. Ask before assigning it.
     writeUps: [
       { title: 'M290 Coolant Seal Repair', path: 'work/m290-coolant-seal/' },

@@ -61,7 +61,7 @@ The dedicated preview component only shares this project's presentation between 
 
 ## Homepage experience timeline
 
-The user supplied the factual chronology and copy for six roles from June 2022 through August 2025. Display the entries newest-to-oldest so the most recent technical experience appears first, and preserve the supplied meaning. Use uniform entry widths and marker styling. The three SIG SAUER internships retain `/ 01`, `/ 02`, and `/ 03` in their company labels to communicate sequence without giving those entries a different visual treatment.
+The user supplied the factual chronology and copy for six roles from June 2022 through August 2025. Display the entries newest-to-oldest so the most recent technical experience appears first, and preserve the supplied meaning. Use uniform entry widths and marker styling. The three Sig Sauer internships retain `/ 01`, `/ 02`, and `/ 03` in their company labels to communicate sequence without giving those entries a different visual treatment.
 
 The timeline uses native horizontal overflow plus a small authored script for mouse dragging and extremely slow idle movement on desktop. It reverses at the ends, pauses for interaction, disables automatic movement on small screens, and respects `prefers-reduced-motion`. Keep manual scrolling primary and do not add a carousel or animation dependency.
 
@@ -88,7 +88,7 @@ beginning of a card system, and it is not a commitment for future projects.
 ## Source material and publication limits
 
 The wider photo archive at `Desktop/Personal/3D Printer/Completed Projects/Photo Dump` is reference
-material, not approved content. Several items are excluded from the site by decision: SIG SAUER
+material, not approved content. Several items are excluded from the site by decision: Sig Sauer
 suppressor build and depowdering photographs, the oversized-particle thermal event, and the
 templated FEA report itself. The Pirouette internship deck may inform prose but its part
 nomenclature, MFG document numbers, and embedded Onshape link must never be published.
@@ -161,7 +161,7 @@ link timeline entries to project pages.
 The six roles live in `src/data/experience.js` and are read by both the timeline component and the
 Experience page. Edit them in one place.
 
-The M290 latch is not yet assigned to a role. It is SIG SAUER work but Zachary has not said which of
+The M290 latch is not yet assigned to a role. It is Sig Sauer work but Zachary has not said which of
 the three internships it belongs to; ask before listing it under one.
 
 ## Remote Holder
@@ -209,7 +209,7 @@ instructor is named. OSHA 10-Hour Safety Course: supplied by Zachary with his re
 
 The facts on `/about/` come from Zachary in this project: engineering coursework at Embry-Riddle
 Aeronautical University and the University of Central Florida; finishing his bachelor's degree part
-time through online coursework; the three SIG SAUER internships, the Pratt & Whitney co-op and the
+time through online coursework; the three Sig Sauer internships, the Pratt & Whitney co-op and the
 Pirouette internship; most drawn to aviation and aircraft; skiing, camping, and his own car
 maintenance and home repairs. The line about taking a part from a CAD model to something he can
 hold was drafted with him and kept.
@@ -237,6 +237,12 @@ pdftoppm -png -scale-to-x 1000 -scale-to-y -1 -singlefile public/zachary-dutton-
 python -c "from PIL import Image; [Image.open(f'r{w}.png').convert('RGB').save(f'public/images/resume/resume-{w}.webp', 'WEBP', lossless=True, method=6) for w in (1700, 1000)]"
 ```
 
+## Naming
+
+Zachary asked on 23 September 2026 for the company to be written "Sig Sauer", in normal case and
+never all caps, and for the Pratt & Whitney co-op to be described as aftermarket sustainment
+engineering, matching his title. The site and his resume both follow this.
+
 ## Page headers, photos on phones, and the footer
 
 Set at Zachary's request on 23 September 2026, after he reviewed the site on his phone.
@@ -250,6 +256,9 @@ Set at Zachary's request on 23 September 2026, after he reviewed the site on his
 - The footer is centered: "Contact" on top, the email and LinkedIn links below it. It no longer
   repeats his name.
 - The Resume sections on About and Experience link to `/resume/` and carry no "updated" line.
+- The About page lists (Education, Skills and tools) have no rule between items. Each section has
+  its one top rule, and the items sit indented under the heading. Zachary found a line under every
+  item confusing. The Experience page's training list still uses rules between items.
 
 ## Not on the site
 
