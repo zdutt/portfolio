@@ -15,7 +15,7 @@ Current homepage order:
 5. About preview
 6. Contact/footer
 
-The homepage introduction is deliberately specific. On desktop, the portrait is on the left. The right column starts with “Zachary Dutton” aligned to the top of the photo, followed by “Design / Manufacturing / Prototyping.” The final line of the paragraph aligns with the bottom of the photo. On mobile, the portrait and text stack naturally.
+The homepage introduction is deliberately specific. On desktop, the portrait is on the left. The right column starts with “Zachary Dutton” aligned to the top of the photo, followed by “Design / Manufacturing / Prototyping.” The final line of the paragraph aligns with the bottom of the photo. On mobile, the portrait floats left at a little under half the width and the text starts beside it, then wraps full width below it. Zachary asked for this because the stacked photo filled his phone screen; the About portrait does the same.
 
 The experience timeline shows six technical roles from 2022 through 2025, newest first. The first visible role must be `SIG SAUER / 03`. All entries use the same width and styling. The horizontal scrollbar is hidden, manual scrolling remains available, and slow automatic movement runs only on larger screens. Do not restore Target or Market Basket.
 
@@ -67,7 +67,8 @@ Important locations:
 - `src/data/experience.js`: the six roles, read by the timeline and the Experience page
 - `src/pages/experience.astro`: the professional record, newest first
 - `src/pages/about.astro`: background, education, and skills and tools
-- `public/zachary-dutton-resume.pdf`: the resume the Resume link opens; replace the file to update it
+- `src/pages/resume.astro`: the Resume page, which shows the resume as an image with Download PDF and Open PDF buttons
+- `public/zachary-dutton-resume.pdf`: the resume file itself; when you replace it, regenerate the page images in `public/images/resume/` (commands in `PROJECT_BRIEF.md`)
 - `src/pages/work/`: one page per written-up piece of work
 - `src/styles/global.css`: site-wide visual system and responsive rules
 - `public/images/`: optimized site images grouped by project where appropriate

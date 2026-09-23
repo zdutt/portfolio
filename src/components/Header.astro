@@ -4,6 +4,7 @@ const links = [
   { label: 'Work', path: 'work/' },
   { label: 'Experience', path: 'experience/' },
   { label: 'About', path: 'about/' },
+  { label: 'Resume', path: 'resume/' },
 ];
 ---
 <header class="site-header shell">
@@ -13,7 +14,6 @@ const links = [
       {links.map(({ label, path }) => (
         <li><a href={`${base}${path}`} aria-current={Astro.url.pathname.replace(/\/$/, '') === `${base}${path}`.replace(/\/$/, '') ? 'page' : undefined}>{label}</a></li>
       ))}
-      <li><a href={`${base}zachary-dutton-resume.pdf`} type="application/pdf">Resume</a></li>
     </ul>
   </nav>
 </header>

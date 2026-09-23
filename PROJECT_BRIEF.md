@@ -38,7 +38,7 @@ No React, Vue, Svelte, Tailwind, Bootstrap, UI/component libraries, animation li
 - `/work/`: the Work index, every written-up piece, then Smaller Work / Design Notes.
 - `/experience/`: the professional record, training and certification, and a link to the resume.
 - `/about/`: background, education, and skills and tools, with the portrait Zachary supplied for the page.
-- The Resume navigation item links straight to the PDF at `/zachary-dutton-resume.pdf`. There is no Resume page.
+- `/resume/`: the resume shown as an image of the page, with Download PDF and Open PDF buttons. The PDF itself is `/zachary-dutton-resume.pdf`.
 - Contact belongs in the footer/About area; no separate Contact route.
 
 Navigation: **ZACHARY DUTTON** left; **WORK / EXPERIENCE / ABOUT / RESUME** right on desktop.
@@ -225,6 +225,31 @@ resized to 1400 px tall, with metadata stripped. It is shown at its own aspect r
 `public/zachary-dutton-resume.pdf` is the web copy of his one-page resume: month-level dates, no
 phone number and no pending role. The phone number is deliberately kept off the site. The source
 lives in his local resume folder; to update the site, replace this file with the newer web copy.
+
+The `/resume/` page shows the PDF as two lossless WebP images rendered from it, 1700 and 1000 px
+wide, in `public/images/resume/`. Zachary wanted the Resume link to show the whole resume on a page,
+with downloading and opening the PDF as separate buttons. Whenever the PDF changes, regenerate both
+images from it or the page will show the old version. With poppler and Pillow:
+
+```
+pdftoppm -png -r 200 -singlefile public/zachary-dutton-resume.pdf r1700
+pdftoppm -png -scale-to-x 1000 -scale-to-y -1 -singlefile public/zachary-dutton-resume.pdf r1000
+python -c "from PIL import Image; [Image.open(f'r{w}.png').convert('RGB').save(f'public/images/resume/resume-{w}.webp', 'WEBP', lossless=True, method=6) for w in (1700, 1000)]"
+```
+
+## Page headers, photos on phones, and the footer
+
+Set at Zachary's request on 23 September 2026, after he reviewed the site on his phone.
+
+- Work, Experience, About and Resume use the compact split header (`page-intro--split`): the page
+  name on the left and one short line on the right, with no eyebrow above it, on desktop and
+  phones. The full-height headers took up too much of the screen. Project pages keep their full
+  intro because their titles are long.
+- On phones, the home portrait and the About portrait float left at 44% of the width, so the text
+  starts beside the photo and wraps full width below it, instead of the photo filling the screen.
+- The footer is centered: "Contact" on top, the email and LinkedIn links below it. It no longer
+  repeats his name.
+- The Resume sections on About and Experience link to `/resume/` and carry no "updated" line.
 
 ## Not on the site
 

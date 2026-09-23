@@ -5,10 +5,9 @@ const base = import.meta.env.BASE_URL;
 const roles = [...experience].reverse();
 ---
 <BaseLayout title="Experience">
-  <header class="page-intro">
-    <p class="eyebrow">Background</p>
+  <header class="page-intro page-intro--split">
     <h1>Experience</h1>
-    <p class="intro muted">Six technical roles between 2022 and 2025, across metal additive manufacturing, aftermarket repair engineering, and medical-device development. Newest first.</p>
+    <p class="intro muted">Six technical roles from 2022 to 2025, newest first.</p>
   </header>
 
   <section class="section role-list" aria-labelledby="roles-heading">
@@ -56,6 +55,6 @@ const roles = [...experience].reverse();
 
   <section class="section preview" aria-labelledby="resume-heading">
     <h2 id="resume-heading">Resume</h2>
-    <div><p class="muted">One page, updated September 2026.</p><a href={`${base}zachary-dutton-resume.pdf`} type="application/pdf">Download the resume (PDF)</a></div>
+    <div><a href={`${base}resume/`}>View the resume</a></div>
   </section>
 </BaseLayout>
