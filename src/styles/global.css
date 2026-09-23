@@ -54,9 +54,10 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
 .credentials span.muted, .fact-list span.muted { font-size: 0.9375rem; }
 .fact-list { margin-top: 1.5rem; padding-left: 1.5rem; }
 .fact-list li { border-top: 0; padding-block: 0.6rem; }
-.design-notes { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin: 2rem 0 0; padding: 0; }
-.design-note h3 { margin: 1.5rem 0 0; font-size: 1.25rem; font-weight: 400; letter-spacing: -0.02em; }
-.design-note p { margin-top: 0.75rem; font-size: 0.9375rem; }
+.design-notes { list-style: none; display: flex; flex-direction: column; gap: 2.25rem; margin: 2rem 0 0; padding: 0; }
+.design-note { display: grid; grid-template-columns: 8rem minmax(0, 1fr); gap: 1.75rem; align-items: start; max-width: 54rem; }
+.design-note h3 { margin: 0; font-size: 1.125rem; font-weight: 400; line-height: 1.3; letter-spacing: -0.02em; }
+.design-note p { margin-top: 0.5rem; font-size: 0.9375rem; line-height: 1.55; }
 .work-more { list-style: none; margin: 4rem 0 0; padding: 0; }
 .work-more li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 2rem; align-items: baseline; border-top: 1px solid var(--line); padding-block: 1.25rem; }
 .work-more a { font-size: 1.125rem; }
@@ -169,7 +170,10 @@ figcaption { color: var(--muted); font-size: 0.875rem; margin-top: 0.75rem; max-
   .credentials li, .fact-list li { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
   .fact-list { margin-top: 1.25rem; padding-left: 1rem; }
   .fact-list li { gap: 0.2rem; padding-block: 0.6rem; }
-  .design-notes { grid-template-columns: 1fr; gap: 3rem; }
+  .design-notes { gap: 1.75rem; }
+  .design-note { display: flow-root; }
+  .design-note-thumb { float: left; width: 6rem; margin: 0.25rem 1rem 0.35rem 0; }
+  .design-note p { font-size: 0.875rem; }
   .work-more li { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
   .work-more { margin-top: 3rem; }
   .role { grid-template-columns: minmax(0, 1fr); gap: 1rem; }

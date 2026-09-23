@@ -19,7 +19,7 @@ The homepage introduction is deliberately specific. On desktop, the portrait is 
 
 The experience timeline shows six technical roles from 2022 through 2025, newest first. The first visible role must be `Sig Sauer / 03`. All entries use the same width and styling. The horizontal scrollbar is hidden, manual scrolling remains available, and slow automatic movement runs only on larger screens. Do not restore Target or Market Basket.
 
-The first full project is the Vacuum Accessory Dock. Its homepage thumbnail is the final CAD image. Its case study explains scanning, mesh cleanup, datum construction, CAD reconstruction, socket creation, mounting geometry, and the printed result.
+Selected Work leads with the M290 Coolant Seal Repair and then the Vacuum Accessory Dock, the order Zachary chose. The dock's thumbnail is the final CAD image. Its case study explains scanning, mesh cleanup, datum construction, CAD reconstruction, socket creation, mounting geometry, and the printed result.
 
 ## Source of truth
 

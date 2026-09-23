@@ -27,11 +27,13 @@ const notes = [
 <ul class="design-notes">
   {notes.map((note) => (
     <li class="design-note">
-      <figure>
+      <figure class="design-note-thumb">
         <img src={`${base}${note.image}`} width={note.width} height={note.height} alt={note.alt} loading="lazy" />
       </figure>
-      <h3>{note.title}</h3>
-      <p class="muted">{note.body}</p>
+      <div class="design-note-copy">
+        <h3>{note.title}</h3>
+        <p class="muted">{note.body}</p>
+      </div>
     </li>
   ))}
 </ul>

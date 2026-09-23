@@ -88,9 +88,9 @@ what he stated.
 ## Project previews
 
 `VacuumDockPreview.astro` was replaced by `ProjectPreview.astro`, which takes props and is used for
-both projects on Home and Work. Previews alternate: the dock places its image left on a dark panel,
-the latch places its image right on a light panel. This is deliberate editorial rhythm, not the
-beginning of a card system, and it is not a commitment for future projects.
+every preview on Home and Work. Previews alternate sides down the page: the first image on the
+left, the next on the right, and so on. This is deliberate editorial rhythm, not the beginning of a
+card system, and it is not a commitment for future projects.
 
 ## Source material and publication limits
 
@@ -165,6 +165,10 @@ The homepage keeps the chronological timeline unlinked for the same reason, and 
 through Selected Work: the two strongest pieces as full previews, the rest as a compact list. Do not
 link timeline entries to project pages.
 
+Zachary set the order on 23 September 2026: the M290 Coolant Seal Repair first, then the Vacuum
+Accessory Dock. On Home those two are the full previews and the latch, the coolant stand analysis and
+the remote holder follow in the compact list. The Work page shows all five as previews in that order.
+
 The six roles live in `src/data/experience.js` and are read by both the timeline component and the
 Experience page. Edit them in one place.
 
@@ -189,6 +193,10 @@ matplotlib output was faceted and washed out and Zachary rejected it. The fitmen
 dropped because the pocket sits on the underside and the render showed a featureless slab.
 
 ## Design notes
+
+Smaller Work is deliberately compact, at Zachary's request: one-off parts should not take the space of
+a main project. Each note is a row with a small thumbnail at its own aspect ratio beside the text, 8rem
+wide on desktop and 6rem on phones, where the text wraps around it.
 
 Filament shelf: Zachary saw a filament holder design online, liked it, and modelled his own instead
 of printing it. The original was built around 28 mm timber, not a US size, so his bracket was sized

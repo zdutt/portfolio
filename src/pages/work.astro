@@ -8,6 +8,15 @@ import DesignNotes from '../components/DesignNotes.astro';
   <section class="section" aria-labelledby="selected-heading">
     <h2 id="selected-heading">Selected Work</h2>
     <ProjectPreview
+      href="work/m290-coolant-seal/"
+      eyebrow="Repair / Machine recommissioning"
+      title="M290 Coolant Seal Repair"
+      summary="Corroded sealing faces on a used machine, rebuilt flat in-house against a months-long lead time."
+      image="images/m290-coolant/sanded.jpg"
+      alt="A coolant tank seating area stripped back to bare metal, with corroded surface alongside."
+      surface="photo"
+    />
+    <ProjectPreview
       href="work/vacuum-accessory-dock/"
       eyebrow="Design study / Reverse engineering"
       title="Vacuum Accessory Dock"
@@ -15,6 +24,7 @@ import DesignNotes from '../components/DesignNotes.astro';
       image="images/vacuum-accessory-dock/final-cad.png"
       alt="Final CAD model of the two-socket vacuum accessory dock."
       surface="cad"
+      reversed
     />
     <ProjectPreview
       href="work/m290-latch/"
@@ -23,16 +33,6 @@ import DesignNotes from '../components/DesignNotes.astro';
       summary="A worn latch was failing the machine's pressure and purge tests. Shortening it fixed them."
       image="images/m290-latch/latch-printed.jpg"
       alt="The redesigned latch as printed in 17-4 stainless steel, held in a hand."
-      surface="photo"
-      reversed
-    />
-    <ProjectPreview
-      href="work/m290-coolant-seal/"
-      eyebrow="Repair / Machine recommissioning"
-      title="M290 Coolant Seal Repair"
-      summary="Corroded sealing faces on a used machine, rebuilt flat in-house against a months-long lead time."
-      image="images/m290-coolant/sanded.jpg"
-      alt="A coolant tank seating area stripped back to bare metal, with corroded surface alongside."
       surface="photo"
     />
     <ProjectPreview
@@ -43,6 +43,7 @@ import DesignNotes from '../components/DesignNotes.astro';
       image="images/remote-holder/remotes.jpg"
       alt="Three remotes laid out on a gridded cutting mat, photographed from above."
       surface="photo"
+      reversed
     />
     <ProjectPreview
       href="work/coolant-stand-fea/"
@@ -52,7 +53,6 @@ import DesignNotes from '../components/DesignNotes.astro';
       image="images/coolant-stand-fea/stand-cad.jpg"
       alt="Shaded CAD view of the welded steel coolant tank stand."
       surface="cad"
-      reversed
     />
   </section>
   <section class="section" aria-labelledby="studies-heading">
