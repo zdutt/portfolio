@@ -65,6 +65,13 @@ The user supplied the factual chronology and copy for six roles from June 2022 t
 
 The timeline uses native horizontal overflow plus a small authored script for mouse dragging and extremely slow idle movement on desktop. It reverses at the ends, pauses for interaction, disables automatic movement on small screens, and respects `prefers-reduced-motion`. Keep manual scrolling primary and do not add a carousel or animation dependency.
 
+Do not size the track with `width: max-content`. Safari, which every iPhone browser uses, works out a
+flex container's max-content width from each card's text laid out on one unwrapped line, not from the
+cards' fixed widths. At phone width that came to roughly 4,200 px against 1,880 px of cards, so on
+Zachary's iPhone the timeline kept scrolling into blank paper after the last card. Chromium sized it
+correctly, which is why the problem never showed up in testing. The track now takes the viewport's
+width and the fixed-width cards overflow it, so the scroll ends at the last card in every engine.
+
 ## Second project: M290 Latch Redesign
 
 A worn latch on an EOS M290 was no longer drawing its closure tight, and the machine's pressure and
@@ -215,9 +222,9 @@ maintenance and home repairs. The line about taking a part from a CAD model to s
 hold was drafted with him and kept.
 
 The degree appears without a major, school or graduation date, and school years are left off, on
-purpose. The upcoming full-time role is described as an engineering technician position in additive
-manufacturing without naming the employer, until Zachary confirms it can be named publicly. Add
-neither without his instruction. The skills list mirrors the skills section of his resume.
+purpose. The upcoming full-time role is not mentioned anywhere on the site: the offer is tentative
+and the site supports his wider job search, so Zachary asked for it to be left off. Add neither
+without his instruction. The skills list mirrors the skills section of his resume.
 
 The portrait is his photograph, cropped to 4:5 to take a power line out of the top of the frame,
 resized to 1400 px tall, with metadata stripped. It is shown at its own aspect ratio.
@@ -243,6 +250,10 @@ Zachary asked on 23 September 2026 for the company to be written "Sig Sauer", in
 never all caps, and for the Pratt & Whitney co-op to be described as aftermarket sustainment
 engineering, matching his title. The site and his resume both follow this.
 
+Section headers that are short labels use title case (Skills and Tools, Training and
+Certification), and so do the category labels under them. Project-page headings are
+sentences and stay in sentence case.
+
 ## Page headers, photos on phones, and the footer
 
 Set at Zachary's request on 23 September 2026, after he reviewed the site on his phone.
@@ -256,7 +267,7 @@ Set at Zachary's request on 23 September 2026, after he reviewed the site on his
 - The footer is centered: "Contact" on top, the email and LinkedIn links below it. It no longer
   repeats his name.
 - The Resume sections on About and Experience link to `/resume/` and carry no "updated" line.
-- The About page lists (Education, Skills and tools) have no rule between items. Each section has
+- The About page lists (Education, Skills and Tools) have no rule between items. Each section has
   its one top rule, and the items sit indented under the heading. Zachary found a line under every
   item confusing. The Experience page's training list still uses rules between items.
 

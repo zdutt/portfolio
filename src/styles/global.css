@@ -124,7 +124,7 @@ figcaption { color: var(--muted); font-size: 0.875rem; margin-top: 0.75rem; max-
 .timeline-viewport::-webkit-scrollbar { display: none; }
 .timeline-viewport:focus-visible { outline: 2px solid var(--ink); outline-offset: 0.5rem; }
 .timeline-viewport.is-dragging { cursor: grabbing; }
-.timeline-track { display: flex; gap: 2.5rem; width: max-content; position: relative; }
+.timeline-track { display: flex; gap: 2.5rem; position: relative; }
 .timeline-entry { position: relative; flex: 0 0 19.5rem; padding: 4rem 0 0; }
 .timeline-entry::before { content: ''; position: absolute; top: 1.25rem; left: 0; width: calc(100% + 2.5rem); border-top: 1px solid var(--ink); }
 .timeline-entry:last-child::before { width: 100%; }
