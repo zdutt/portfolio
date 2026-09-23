@@ -35,10 +35,10 @@ No React, Vue, Svelte, Tailwind, Bootstrap, UI/component libraries, animation li
 ## Current sitemap
 
 - `/`: headshot and concise factual profile, horizontally scrollable experience chronology, Selected Work, Smaller Work / Design Notes, About preview, shared footer/contact area.
-- `/work/`: spaces for selected work and smaller studies.
-- `/experience/`: professional background placeholder, eventually complementing the resume.
-- `/about/`: personal introduction/background and a photograph placeholder.
-- Resume is a visibly muted, disabled navigation placeholder until a real document exists. No Resume page.
+- `/work/`: the Work index, every written-up piece, then Smaller Work / Design Notes.
+- `/experience/`: the professional record, training and certification, and a link to the resume.
+- `/about/`: background, education, and skills and tools, with the portrait Zachary supplied for the page.
+- The Resume navigation item links straight to the PDF at `/zachary-dutton-resume.pdf`. There is no Resume page.
 - Contact belongs in the footer/About area; no separate Contact route.
 
 Navigation: **ZACHARY DUTTON** left; **WORK / EXPERIENCE / ABOUT / RESUME** right on desktop.
@@ -200,10 +200,31 @@ hook whose back face follows it, replacing a generic hook that only contacted in
 
 ## Training and certification
 
-Certified SolidWorks Associate: Zachary holds this. A GD&T course taken while at Pratt & Whitney is
-listed with no further detail. He recalls the instructor contributed to a standard and has a book,
-but has not yet confirmed the name, so nothing about the instructor appears on the site. Do not add
-it until he supplies the reference.
+Certified SolidWorks Associate: Zachary holds this. GD&T: a course taken during the Pratt & Whitney
+co-op that followed the book GeoTol Pro 2020, which is written to ASME Y14.5-2018. The site lists
+both. He believes the instructor was one of the book's authors but has not confirmed it, so no
+instructor is named. OSHA 10-Hour Safety Course: supplied by Zachary with his resume details.
+
+## About page and resume
+
+The facts on `/about/` come from Zachary in this project: engineering coursework at Embry-Riddle
+Aeronautical University and the University of Central Florida; finishing his bachelor's degree part
+time through online coursework; the three SIG SAUER internships, the Pratt & Whitney co-op and the
+Pirouette internship; most drawn to aviation and aircraft; skiing, camping, and his own car
+maintenance and home repairs. The line about taking a part from a CAD model to something he can
+hold was drafted with him and kept.
+
+The degree appears without a major, school or graduation date, and school years are left off, on
+purpose. The upcoming full-time role is described as an engineering technician position in additive
+manufacturing without naming the employer, until Zachary confirms it can be named publicly. Add
+neither without his instruction. The skills list mirrors the skills section of his resume.
+
+The portrait is his photograph, cropped to 4:5 to take a power line out of the top of the frame,
+resized to 1400 px tall, with metadata stripped. It is shown at its own aspect ratio.
+
+`public/zachary-dutton-resume.pdf` is the web copy of his one-page resume: month-level dates, no
+phone number and no pending role. The phone number is deliberately kept off the site. The source
+lives in his local resume folder; to update the site, replace this file with the newer web copy.
 
 ## Not on the site
 

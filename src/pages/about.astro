@@ -1,10 +1,61 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+// Supplied by Zachary. The degree is described without a major, school or date on
+// purpose, and the upcoming role without its employer: add neither until he says so.
+const education = [
+  { name: 'University of Central Florida', detail: 'Engineering coursework. Orlando, Florida.' },
+  { name: 'Embry-Riddle Aeronautical University', detail: 'Engineering coursework. Daytona Beach, Florida.' },
+  { name: "Bachelor's degree", detail: 'Completing part time through online coursework.' },
+];
+const skills = [
+  { name: 'CAD and analysis', detail: 'SolidWorks, SolidWorks Simulation (static FEA), Siemens NX, CATIA, Fusion, Inventor and Solid Edge. Technical drawings and GD&T. Revopoint 3D scanning and scan-to-CAD reverse engineering.' },
+  { name: 'Additive manufacturing', detail: 'EOS M290 and M400, DMLS/LPBF, build preparation, powder handling, post-processing, Grenzebach pallet automation, Volkmann depowdering and powder reclaim, and Cura. Resin, SLS and FDM printing.' },
+  { name: 'Manufacturing', detail: 'Tooling and fixturing, wire EDM, basic CNC toolpaths and manual G-code, milling and lathe work, work instructions, and 6S.' },
+  { name: 'Testing and metrology', detail: 'Pressure decay, occlusion, tensile and compressive testing (Instron UTM), heat-accelerated aging, and Rockwell hardness. Calipers, bore calipers, digital and height micrometers, gauge pins, feeler gauges, and an optical micrometer.' },
+  { name: 'Software', detail: 'Microsoft Office, including advanced Excel with VBA. Python.' },
+];
 ---
 <BaseLayout title="About">
-  <header class="page-intro"><p class="eyebrow">Zachary Dutton</p><h1>About</h1><p class="intro muted">A short introduction to come.</p></header>
+  <header class="page-intro">
+    <p class="eyebrow">Zachary Dutton</p>
+    <h1>About</h1>
+    <p class="intro muted">Where I studied, what I work with, and what I do outside work.</p>
+  </header>
+
   <section class="section about-layout" aria-labelledby="background-heading">
-    <div class="placeholder portrait-placeholder"><span>Photograph / Placeholder</span></div>
-    <div><h2 id="background-heading">Background</h2><p class="muted">Personal background and interests will be added here.</p></div>
+    <figure class="about-portrait">
+      <img src={`${base}images/about-portrait.jpg`} width="1120" height="1400" alt="Zachary Dutton in a dark suit and tie, standing on a lawn in front of trees." fetchpriority="high" />
+    </figure>
+    <div class="about-copy">
+      <h2 id="background-heading">Background</h2>
+      <p>I studied engineering at Embry-Riddle Aeronautical University and the University of Central Florida. Along the way I completed three internships in metal additive manufacturing at SIG SAUER, a co-op in aftermarket repair engineering at Pratt &amp; Whitney, and an engineering internship at Pirouette Medical.</p>
+      <p>Most of my work has sat between design and production: improving how parts get made, running time and powder studies to settle process questions, designing fixtures, and repairing machines in-house. I'm most drawn to aviation and aircraft, and I enjoy work that takes a part from a CAD model to something I can hold.</p>
+      <p>I'll soon start full time as an engineering technician in additive manufacturing, and I'm finishing my bachelor's degree part time through online coursework.</p>
+      <p>Outside work, I ski, camp, and do my own car maintenance and home repairs.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="education-heading">
+    <h2 id="education-heading">Education</h2>
+    <ul class="fact-list">
+      {education.map((item) => (
+        <li><span class="fact-name">{item.name}</span><span class="muted">{item.detail}</span></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section" aria-labelledby="skills-heading">
+    <h2 id="skills-heading">Skills and tools</h2>
+    <ul class="fact-list">
+      {skills.map((item) => (
+        <li><span class="fact-name">{item.name}</span><span class="muted">{item.detail}</span></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section preview" aria-labelledby="resume-heading">
+    <h2 id="resume-heading">Resume</h2>
+    <div><p class="muted">One page, updated September 2026.</p><a href={`${base}zachary-dutton-resume.pdf`} type="application/pdf">Download the resume (PDF)</a></div>
   </section>
 </BaseLayout>

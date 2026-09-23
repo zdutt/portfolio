@@ -13,7 +13,7 @@ const links = [
       {links.map(({ label, path }) => (
         <li><a href={`${base}${path}`} aria-current={Astro.url.pathname.replace(/\/$/, '') === `${base}${path}`.replace(/\/$/, '') ? 'page' : undefined}>{label}</a></li>
       ))}
-      <li><span class="nav-placeholder" role="link" aria-disabled="true" aria-label="Resume (coming soon)" title="Resume (coming soon)">Resume <span class="sr-only">(coming soon)</span></span></li>
+      <li><a href={`${base}zachary-dutton-resume.pdf`} type="application/pdf">Resume</a></li>
     </ul>
   </nav>
 </header>

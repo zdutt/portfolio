@@ -62,10 +62,12 @@ Avoid:
 Important locations:
 
 - `src/pages/index.astro`: homepage composition and copy
-- `src/components/ExperienceTimeline.astro`: timeline data and interaction
+- `src/components/ExperienceTimeline.astro`: timeline markup and interaction (the data is in `src/data/experience.js`)
 - `src/components/ProjectPreview.astro`: shared project preview used on Home and Work
 - `src/data/experience.js`: the six roles, read by the timeline and the Experience page
 - `src/pages/experience.astro`: the professional record, newest first
+- `src/pages/about.astro`: background, education, and skills and tools
+- `public/zachary-dutton-resume.pdf`: the resume the Resume link opens; replace the file to update it
 - `src/pages/work/`: one page per written-up piece of work
 - `src/styles/global.css`: site-wide visual system and responsive rules
 - `public/images/`: optimized site images grouped by project where appropriate
