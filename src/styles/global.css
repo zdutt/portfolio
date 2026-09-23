@@ -84,7 +84,10 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
 .resume-view { padding-block: 2.5rem 4rem; }
 .resume-frame { max-width: 52rem; margin-inline: auto; }
 .resume-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; }
-.resume-sheet { display: block; border: 1px solid var(--line); background: #fff; }
+.resume-sheet { position: relative; border: 1px solid var(--line); background: #fff; }
+.resume-hotspot { position: absolute; display: block; }
+.resume-hotspot:hover { background: rgba(36, 36, 33, 0.07); }
+.resume-hotspot:focus-visible { outline-offset: 1px; }
 .resume-sheet img { display: block; width: 100%; height: auto; }
 
 .project-preview { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; align-items: center; margin-top: 2rem; }
@@ -170,7 +173,7 @@ figcaption { color: var(--muted); font-size: 0.875rem; margin-top: 0.75rem; max-
   .work-more li { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
   .work-more { margin-top: 3rem; }
   .role { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
-  .contact-links { flex-direction: column; align-items: center; gap: 0.5rem; }
+  .contact-links { gap: 1.5rem; }
   .resume-view { padding-block: 1.5rem 3rem; }
   .resume-actions { margin-bottom: 1.25rem; }
   .resume-actions .button { flex: 1 1 8rem; text-align: center; }

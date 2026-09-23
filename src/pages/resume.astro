@@ -5,6 +5,13 @@ const pdf = `${base}zachary-dutton-resume.pdf`;
 const images = `${base}images/resume/`;
 // The two page images are rendered from the PDF. When the PDF is replaced, regenerate them
 // with the commands in PROJECT_BRIEF.md ("About page and resume") so the page matches the file.
+// The contact details in the image are live links: these areas sit over them, in percent of the
+// page, taken from the PDF's own link annotations with a little padding. Regenerate them too.
+const links = [
+  { href: 'mailto:zdutton04@gmail.com', label: 'Email zdutton04@gmail.com', left: 28.501, top: 6.357, width: 14.416, height: 2.022 },
+  { href: 'https://zdutton.com', label: 'zdutton.com', left: 44.143, top: 6.357, width: 8.264, height: 2.022 },
+  { href: 'https://www.linkedin.com/in/zachary-dutton-315b30201', label: 'LinkedIn profile', left: 53.633, top: 6.357, width: 26.479, height: 2.022, external: true },
+];
 ---
 <BaseLayout title="Resume">
   <header class="page-intro page-intro--split">
@@ -18,7 +25,7 @@ const images = `${base}images/resume/`;
         <a class="button" href={pdf} download="Zachary-Dutton-Resume.pdf">Download PDF</a>
         <a class="button button--outline" href={pdf} target="_blank" rel="noopener">Open PDF</a>
       </div>
-      <a class="resume-sheet" href={pdf} target="_blank" rel="noopener" aria-label="Open the resume as a PDF">
+      <div class="resume-sheet">
         <img
           src={`${images}resume-1000.webp`}
           srcset={`${images}resume-1000.webp 1000w, ${images}resume-1700.webp 1700w`}
@@ -28,7 +35,16 @@ const images = `${base}images/resume/`;
           alt="Zachary Dutton's one-page resume."
           fetchpriority="high"
         />
-      </a>
+        {links.map((link) => (
+          <a
+            class="resume-hotspot"
+            href={link.href}
+            aria-label={link.label}
+            style={`left: ${link.left}%; top: ${link.top}%; width: ${link.width}%; height: ${link.height}%;`}
+            {...(link.external ? { target: '_blank', rel: 'me noopener' } : {})}
+          ></a>
+        ))}
+      </div>
     </div>
   </section>
 </BaseLayout>

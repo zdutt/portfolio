@@ -244,6 +244,19 @@ pdftoppm -png -scale-to-x 1000 -scale-to-y -1 -singlefile public/zachary-dutton-
 python -c "from PIL import Image; [Image.open(f'r{w}.png').convert('RGB').save(f'public/images/resume/resume-{w}.webp', 'WEBP', lossless=True, method=6) for w in (1700, 1000)]"
 ```
 
+The email, website and LinkedIn shown in the picture are live links. Zachary tapped LinkedIn on the
+picture and nothing happened, so transparent link areas now sit over those three details. Their
+positions, the `links` list in `src/pages/resume.astro`, come from the PDF's own link annotations,
+converted to percent of the page and padded by 3 pt vertically and 2 pt horizontally. When the PDF
+changes, re-read them with pypdf and update the list:
+
+```
+python -c "from pypdf import PdfReader; p=PdfReader('public/zachary-dutton-resume.pdf').pages[0]; W,H=float(p.mediabox.width),float(p.mediabox.height); [print(a.get_object()['/A']['/URI'], [round(v,2) for v in a.get_object()['/Rect']]) for a in p['/Annots']]"
+```
+
+The resume itself shows the LinkedIn address in full, linkedin.com/in/zachary-dutton-315b30201,
+rather than the word LinkedIn, so it also works on paper.
+
 ## Naming
 
 Zachary asked on 23 September 2026 for the company to be written "Sig Sauer", in normal case and
@@ -264,8 +277,8 @@ Set at Zachary's request on 23 September 2026, after he reviewed the site on his
   intro because their titles are long.
 - On phones, the home portrait and the About portrait float left at 44% of the width, so the text
   starts beside the photo and wraps full width below it, instead of the photo filling the screen.
-- The footer is centered: "Contact" on top, the email and LinkedIn links below it. It no longer
-  repeats his name.
+- The footer is centered: "Contact" on top, and the email and LinkedIn links side by side on one
+  line below it, on phones as well. It no longer repeats his name.
 - The Resume sections on About and Experience link to `/resume/` and carry no "updated" line.
 - The About page lists (Education, Skills and Tools) have no rule between items. Each section has
   its one top rule, and the items sit indented under the heading. Zachary found a line under every
