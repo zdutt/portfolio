@@ -208,23 +208,8 @@ Smaller Work is deliberately compact, at Zachary's request: one-off parts should
 a main project. Each note is a row with a small thumbnail at its own aspect ratio beside the text, 8rem
 wide on desktop and 6rem on phones, where the text wraps around it.
 
-Zachary set the order on 25 September 2026: the bed sensor repair first, then the filament shelf, then
-the towel hook. The Accord note, added the same day, comes last.
-
-Filament shelf: Zachary saw a filament holder design online, liked it, and modelled his own instead
-of printing it. The original was built around 28 mm timber, not a US size, so his bracket was sized
-around dowels he could buy, and a printed collar checked the fit first. His design, not a derivative
-of the downloaded file; the note credits the idea without naming the original.
-
-Bed sensor repair: the bed level sensors on Zachary's FlashForge Adventurer 5M failed, the printer
-stopped getting a probe measurement, and the head kept driving into the plate. He stripped it down,
-cleaned the boards and connections, retightened the belts, and on reinstalling the pressure sensors
-had no factory torque spec, so he ran a system recalibration and let the machine re-zero against the
-torque he had applied rather than guessing at the original preload. It has printed correctly since.
-The Smaller Work standfirst reads "One-off parts and small repairs" so a repair fits the section.
-
-Towel hook: scanned the curved bathroom drawer front, took the curvature from the scan, modelled a
-hook whose back face follows it, replacing a generic hook that only contacted in one place.
+Zachary set the order on 25 September 2026: the Accord note first, then the bed sensor repair, then
+the filament shelf.
 
 Amp wiring and headliner, 2009 Honda Accord: Zachary's own car. He asked for this note on 25 September
 2026, using his amp wiring photo, with the headliner in the same note. The facts come from his Photo
@@ -235,6 +220,22 @@ residue the old headliner left, and covered it in new suede. The thumbnail is th
 "Amp Wiring", cropped to the carpeted panel and converted from Display P3 to sRGB. The headliner
 photos are not used. The finished one was taken before the headliner went back in, so the note does
 not say it was reinstalled.
+
+Bed sensor repair: the bed level sensors on Zachary's FlashForge Adventurer 5M failed, the printer
+stopped getting a probe measurement, and the head kept driving into the plate. He stripped it down,
+cleaned the boards and connections, retightened the belts, and on reinstalling the pressure sensors
+had no factory torque spec, so he ran a system recalibration and let the machine re-zero against the
+torque he had applied rather than guessing at the original preload. It has printed correctly since.
+The Smaller Work standfirst reads "One-off parts and small repairs" so a repair fits the section.
+
+Filament shelf: Zachary saw a filament holder design online, liked it, and modelled his own instead
+of printing it. The original was built around 28 mm timber, not a US size, so his bracket was sized
+around dowels he could buy, and a printed collar checked the fit first. His design, not a derivative
+of the downloaded file; the note credits the idea without naming the original.
+
+Towel hook: removed from the site on 25 September 2026 at Zachary's request, with its render. He felt
+the remote holder already shows a stronger use of the same skills. Do not bring it back without his
+instruction.
 
 ## Training and certification
 
