@@ -1,6 +1,14 @@
 ---
 const base = import.meta.env.BASE_URL;
+// Order set by Zachary on 25 September 2026: bed sensor repair, filament shelf, towel hook, then the Accord.
 const notes = [
+  {
+    image: 'images/design-notes/printer-bed-sensors.jpg',
+    width: 1050, height: 1400,
+    alt: 'The underside of a 3D printer bed lifted out of the machine, showing the four corner bed sensors, the wiring harness running back to a small board, and a precision screwdriver resting on the build plate.',
+    title: 'Bed sensor repair, FlashForge Adventurer 5M',
+    body: 'The bed level sensors failed, so the printer stopped getting a probe measurement and kept driving the head into the plate. I stripped it down, cleaned the boards and connections, and retightened the belts. Reinstalling the pressure sensors was the real problem: with no factory torque spec I could not reproduce the original preload, so rather than guess I ran a system recalibration and let the machine re-zero against the torque I had actually applied. It has printed correctly since.',
+  },
   {
     image: 'images/design-notes/filament-shelf.jpg',
     width: 1400, height: 1050,
@@ -16,11 +24,11 @@ const notes = [
     body: 'The bathroom drawer front is curved, and the generic hooks we were using only ever touched it in one place. I scanned the drawer, took the curvature off the scan, and modelled a hook whose back face follows it, so it sits against the front instead of rocking on it.',
   },
   {
-    image: 'images/design-notes/printer-bed-sensors.jpg',
-    width: 1050, height: 1400,
-    alt: 'The underside of a 3D printer bed lifted out of the machine, showing the four corner bed sensors, the wiring harness running back to a small board, and a precision screwdriver resting on the build plate.',
-    title: 'Bed sensor repair, FlashForge Adventurer 5M',
-    body: 'The bed level sensors failed, so the printer stopped getting a probe measurement and kept driving the head into the plate. I stripped it down, cleaned the boards and connections, and retightened the belts. Reinstalling the pressure sensors was the real problem: with no factory torque spec I could not reproduce the original preload, so rather than guess I ran a system recalibration and let the machine re-zero against the torque I had actually applied. It has printed correctly since.',
+    image: 'images/design-notes/accord-amp-wiring.jpg',
+    width: 1306, height: 1400,
+    alt: 'Two car amplifiers mounted on a carpeted panel, a four-channel Rockford Fosgate and a smaller MTX mono amp, with the wiring routed in cable-tied runs to distribution blocks.',
+    title: 'Amp wiring and headliner, 2009 Honda Accord',
+    body: 'In my Accord I wired a four-channel amp for the door speakers and a mono amp for the sub. When the connections in the Rockford Fosgate amp stopped working, I took it apart and cleaned it inside, and it worked fine afterward. The headliner was sagging, so I took it out, wire-brushed off the gooey residue the old material left behind, and covered it in new suede.',
   },
 ];
 ---

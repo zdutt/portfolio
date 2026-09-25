@@ -8,17 +8,17 @@ const images = `${base}images/remote-holder/`;
     <a href={`${base}work/`}>Back to work</a>
     <p class="eyebrow">Design study / Reverse engineering</p>
     <h1>Remote Holder</h1>
-    <p class="intro muted">Three remotes of three different shapes, and a side table they were always loose on. Scanning both the remotes and the table gave me the geometry for a holder that fits all of it.</p>
+    <p class="intro muted">Remotes of different shapes, and a side table they were always loose on. Scanning both the remotes and the table gave me the geometry for a holder that fits all of it.</p>
   </header>
 
   <section class="project-opening" aria-labelledby="problem-heading">
     <figure>
-      <img src={`${images}remotes.jpg`} width="1400" height="1391" alt="Three remotes laid out on a gridded cutting mat, photographed from directly above: two long oval Govee remotes and one small rectangular six-button remote." fetchpriority="high" />
-      <figcaption>The three remotes the holder had to take.</figcaption>
+      <img src={`${images}holder-cad.jpg`} width="1400" height="1046" alt="Render of the holder model: a block with pockets of different shapes cut into its sloped upper face." fetchpriority="high" />
+      <figcaption>The finished body. Render of the model.</figcaption>
     </figure>
     <div class="project-goal">
-      <h2 id="problem-heading">Three shapes, one holder</h2>
-      <p>The remotes have nothing in common. Two are long ovals with rounded ends, one is a small rounded rectangle. Anything generic enough to hold all three would hold none of them properly.</p>
+      <h2 id="problem-heading">Different shapes, one holder</h2>
+      <p>No two of the remotes share a shape. Anything generic enough to hold all of them would hold none of them properly.</p>
       <p>That made it a fitment problem rather than a styling one, and fitment problems are answered by capturing the real geometry rather than guessing at it.</p>
       <dl class="project-facts">
         <div><dt>Process</dt><dd>3D scanning, mesh cleanup, CAD, 3D printing</dd></div>
@@ -41,22 +41,18 @@ const images = `${base}images/remote-holder/`;
   <section class="section text-step" aria-labelledby="test-heading">
     <div class="process-copy">
       <p class="eyebrow">02 / Test the fit first</p>
-      <h2 id="test-heading">One pocket before three</h2>
+      <h2 id="test-heading">One pocket before all of them</h2>
       <p>Before committing to the full body I modelled a flat test coupon carrying a single pocket, so a wrong clearance would cost one small print instead of the whole holder.</p>
       <p>The coupon is 102 by 57 by 24 mm, which is enough material around the pocket to check the fit without printing anything that has to look like the final part.</p>
     </div>
   </section>
 
-  <section class="section process-step" aria-labelledby="holder-heading">
+  <section class="section text-step" aria-labelledby="holder-heading">
     <div class="process-copy">
       <p class="eyebrow">03 / The holder</p>
       <h2 id="holder-heading">A pocket shaped to each remote</h2>
-      <p>The finished body is 140 by 97 by 62 mm and carries three pockets, each cut to the remote that goes in it: one rounded slot for the oval remotes and squarer pockets alongside. The face is angled so the remotes sit back rather than needing a lip to retain them.</p>
+      <p>The finished body is 140 by 97 by 62 mm, with a pocket cut to the shape of each remote.</p>
     </div>
-    <figure>
-      <img src={`${images}holder-cad.jpg`} width="1400" height="1046" alt="Render of the finished holder: an angled block with three separate pockets cut into its upper face." loading="lazy" />
-      <figcaption>The finished body. Render of the model.</figcaption>
-    </figure>
   </section>
 
   <div class="project-end"><a href={`${base}work/`}>Back to all work</a></div>

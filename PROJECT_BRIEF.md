@@ -177,14 +177,24 @@ the three internships it belongs to; ask before listing it under one.
 
 ## Remote Holder
 
-Zachary scanned each of three remotes and, separately, the side table they sit on, using a Revopoint
-POP 4 with its turntable and global markers. The photograph of the three remotes on a gridded
-cutting mat is a photograph only: Zachary confirmed he did not measure from it, and every dimension
-came from the scans. Nothing on the page may imply otherwise. The remotes gave the pocket geometry, the table gave
-the base. He modelled a single-pocket test coupon (102 x 57 x 24 mm) before committing to the full
-body (140 x 97 x 62 mm, three pockets). Photographs of the printed holder are still to come.
-The page no longer says so, at Zachary's instruction, but the rule stands: do not describe the
-physical result until they arrive.
+Zachary scanned the remotes and, separately, the side table they sit on, using a Revopoint POP 4
+with its turntable and global markers. Every dimension came from the scans. The remotes gave the
+pocket geometry, the table gave the base. He modelled a single-pocket test coupon (102 x 57 x 24 mm)
+before committing to the full body (140 x 97 x 62 mm). Photographs of the printed holder are still
+to come from Zachary. The page no longer says so, at Zachary's instruction, but the rule stands: do
+not describe the physical result until they arrive.
+
+On 25 September 2026 Zachary asked for the photograph of the remotes on a gridded cutting mat to be
+taken off the site: it shows a method he did not use to make the holder. The file was deleted. Do not
+bring it back. The render of the body now leads the page and is the Work preview image. The earlier
+copy took its remote count ("three") and its descriptions of the remotes' shapes from that
+photograph, and the render shows four openings, so the page now gives no count and describes no
+individual remote. Ask Zachary for the count before restating one. The line saying the face is
+angled so the remotes sit back was a reading of the model, not something he said, and was dropped.
+
+His Photo Guide describes the Photo Dump image "Remote Scan" as him scanning a Klipsch speaker remote
+with the POP 4 on its turntable with global markers, the scan he used for this holder. It is not on
+the site; it was offered to him on 25 September as a stopgap until his new photos arrive.
 
 The CAD image on this page is a render generated from his STL file, and the caption says "Render of
 the model" because it is not a photograph and must not read as one. Renders are produced by loading
@@ -197,6 +207,9 @@ dropped because the pocket sits on the underside and the render showed a feature
 Smaller Work is deliberately compact, at Zachary's request: one-off parts should not take the space of
 a main project. Each note is a row with a small thumbnail at its own aspect ratio beside the text, 8rem
 wide on desktop and 6rem on phones, where the text wraps around it.
+
+Zachary set the order on 25 September 2026: the bed sensor repair first, then the filament shelf, then
+the towel hook. The Accord note, added the same day, comes last.
 
 Filament shelf: Zachary saw a filament holder design online, liked it, and modelled his own instead
 of printing it. The original was built around 28 mm timber, not a US size, so his bracket was sized
@@ -212,6 +225,16 @@ The Smaller Work standfirst reads "One-off parts and small repairs" so a repair 
 
 Towel hook: scanned the curved bathroom drawer front, took the curvature from the scan, modelled a
 hook whose back face follows it, replacing a generic hook that only contacted in one place.
+
+Amp wiring and headliner, 2009 Honda Accord: Zachary's own car. He asked for this note on 25 September
+2026, using his amp wiring photo, with the headliner in the same note. The facts come from his Photo
+Guide: he wired a four-channel amp for the door speakers and a mono amp for the sub; when the
+connections in the Rockford Fosgate amp were not working he took it apart and cleaned it inside, and
+it worked fine afterward; the headliner was sagging, so he removed it, wire-brushed off the gooey
+residue the old headliner left, and covered it in new suede. The thumbnail is the Photo Dump image
+"Amp Wiring", cropped to the carpeted panel and converted from Display P3 to sRGB. The headliner
+photos are not used. The finished one was taken before the headliner went back in, so the note does
+not say it was reinstalled.
 
 ## Training and certification
 
